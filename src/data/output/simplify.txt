@@ -1,0 +1,22 @@
+{
+    "Who was the president of the US when Stanford was established?\n": [
+        "Who was the president of the US in 1891?",
+        "-When was Stanford established? -Who was the president of the US when Stanford was established?"
+    ],
+    "Who lived longer, Theodor Haecker or Harry Vaughan Watkins? \n": [
+        "Who was Theodor Haecker? Who was Harry Vaughan Watkins? When did Theodor Haecker die? When did Harry Vaughan Watkins die?",
+        "Who was Theodor Haecker? Who was Harry Vaughan Watkins? When did Theodor Haecker die? When did Harry Vaughan Watkins die?"
+    ],
+    "Why did the founder of Versus die? \n": [
+        "-Who was the founder of Versus? -When did the founder of Versus die? -How did the founder of Versus die?",
+        "-Who was the founder of Versus? -When did the founder of Versus die? -How did the founder of Versus die?"
+    ],
+    "Who is the grandchild of Dambar Shah?\n": [
+        "Who is Dambar Shah's child? Who is Dambar Shah's child's child?",
+        "Who is Dambar Shah's child? Who is Dambar Shah's grandchild?"
+    ],
+    "Are both director of film FAQ: Frequently Asked Questions and director of film The Big Money from the same country?": [
+        "-What is the name of the director for film FAQ: Frequently Asked Questions?",
+        "-What is the director's name for the film FAQ: Frequently Asked Questions?"
+    ]
+}
