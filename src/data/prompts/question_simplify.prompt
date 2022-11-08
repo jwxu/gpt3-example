@@ -1,6 +1,0 @@
-You are asking a question and want to simplify the complex question into multiple simple questions. Try to generate simple, basic, sub-questions.
-# Any line starting with `#` will be ignored, so you can leave comments if you want.
-# Note that empty newlines before/after the comments are NOT ignored, and might affect the results.
-# history should be replaced by (You: <utterance> \nThey: <utterance>)*number_of_turns \n
-{history}
-You:
