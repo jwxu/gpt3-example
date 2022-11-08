@@ -53,7 +53,7 @@ def gen_question(args):
     for question in tqdm(all_questions):
         question_gen[question] = []
         for _ in range(args.num_gen):
-            filled_prompt = neural_worker.fill_prompt_template(history=question_gen[question])
+            filled_prompt = neural_worker.fill_prompt_template(history=question)
             reply = neural_worker.generate(input_text=filled_prompt, args=args, postprocess=True, max_tries=1)
             if len(reply) == 0:
                 # handle the case where the output of GPT-3 only contains whitespace, so the above function returns and empty string
