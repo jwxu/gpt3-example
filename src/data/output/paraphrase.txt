@@ -1,22 +1,6 @@
 {
-    "Who was the president of the US when Stanford was established?\n": [
-        "The US president when Stanford was established was Rutherford B. Hayes.",
-        "The president of the US when Stanford was established was Abraham Lincoln."
-    ],
-    "Who lived longer, Theodor Haecker or Harry Vaughan Watkins? \n": [
-        "Theodor Haecker lived longer than Harry Vaughan Watkins.",
-        "Harry Vaughan Watkins lived longer than Theodor Haecker."
-    ],
-    "Why did the founder of Versus die? \n": [
-        "The founder of Versus died of cancer.",
-        "The founder of Versus, Gianni Versace, died on July 15, 1997. He was shot on the steps of his Miami Beach mansion."
-    ],
-    "Who is the grandchild of Dambar Shah?\n": [
-        "The grandchild of Dambar Shah is Raja.",
-        "The grandchild of Dambar Shah is Rana Uday Singh."
-    ],
-    "Are both director of film FAQ: Frequently Asked Questions and director of film The Big Money from the same country?": [
-        "Yes, both films were directed by Canadians.",
-        "No. FAQ: Frequently Asked Questions is from the United States and The Big Money is from Canada."
+    "who is the mayor of paris ?": [
+        "who is the current mayor of paris ?",
+        "Who is the head of the Parisian government?"
     ]
 }

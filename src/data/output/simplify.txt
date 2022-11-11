@@ -1,22 +1,22 @@
 {
     "Who was the president of the US when Stanford was established?\n": [
-        "Who was the president of the US in 1891?",
-        "-When was Stanford established? -Who was the president of the US when Stanford was established?"
+        "-Who was the first president of the United States? -When was Stanford established?",
+        "What is the year Stanford was established? Who was the president of the US in that year?"
     ],
     "Who lived longer, Theodor Haecker or Harry Vaughan Watkins? \n": [
         "Who was Theodor Haecker? Who was Harry Vaughan Watkins? When did Theodor Haecker die? When did Harry Vaughan Watkins die?",
-        "Who was Theodor Haecker? Who was Harry Vaughan Watkins? When did Theodor Haecker die? When did Harry Vaughan Watkins die?"
+        "Theodor Haecker - When was he born? - When did he die? Harry Vaughan Watkins - When was he born? - When did he die?"
     ],
     "Why did the founder of Versus die? \n": [
         "-Who was the founder of Versus? -When did the founder of Versus die? -How did the founder of Versus die?",
-        "-Who was the founder of Versus? -When did the founder of Versus die? -How did the founder of Versus die?"
+        "What was the founder's name? When did the founder die? What caused the founder's death?"
     ],
     "Who is the grandchild of Dambar Shah?\n": [
-        "Who is Dambar Shah's child? Who is Dambar Shah's child's child?",
-        "Who is Dambar Shah's child? Who is Dambar Shah's grandchild?"
+        "What is Dambar Shah's relationship to the grandchild?",
+        "-Who is Dambar Shah's child? -Who is Dambar Shah's grandchild?"
     ],
     "Are both director of film FAQ: Frequently Asked Questions and director of film The Big Money from the same country?": [
-        "-What is the name of the director for film FAQ: Frequently Asked Questions?",
-        "-What is the director's name for the film FAQ: Frequently Asked Questions?"
+        "What is the director of film FAQ: Frequently Asked Questions' nationality? What is the director of film The Big Money's nationality?",
+        "Is the director of film FAQ: Frequently Asked Questions from the same country as the director of film The Big Money?"
     ]
 }
