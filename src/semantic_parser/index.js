@@ -9,7 +9,6 @@ import * as readline from 'readline';
 const NLU_SERVER = 'http://127.0.0.1:8400/en-US/query';
 
 async function main() {
-    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
     const tpClient = new Tp.FileClient({ thingpedia: './manifest.tt', locale: 'en' });
     const schemas = new ThingTalk.SchemaRetriever(tpClient, null, true);
     const classDef = await schemas.getFullMeta('wd');
@@ -26,67 +25,55 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    rl.prompt();
-    rl.on('line', async (line) => {
-        let thingtalk = null;
-        if (line.startsWith('\t ')) {
-            thingtalk = line.slice('\t '.length);
-        } else {
-            try {
-                const nlu_result = await Tp.Helpers.Http.post(NLU_SERVER, JSON.stringify({ q: line }), {
-                    dataContentType: 'application/json'
-                });
-                const parsed = JSON.parse(nlu_result);
-                if (parsed && parsed.candidates && parsed.candidates.length > 0) 
-                    thingtalk = parsed.candidates[0].code.join(' ');
-            } catch (e) {
-                console.log(e.message);
-            }
-        }
+    var line = "who is the head of goverment of paris ?"
+    let thingtalk = null;
+    try {
+        const nlu_result = await Tp.Helpers.Http.post(NLU_SERVER, JSON.stringify({ q: line }), {
+            dataContentType: 'application/json'
+        });
+        const parsed = JSON.parse(nlu_result);
+        if (parsed && parsed.candidates && parsed.candidates.length > 0) 
+            thingtalk = parsed.candidates[0].code.join(' ');
+    } catch (e) {
+        console.log(e.message);
+    }
 
-        if (!thingtalk) {
-            console.log('Failed to parse the question. \n');
-            rl.prompt();
-            return;
-        }
-        
-        console.log('ThingTalk:', thingtalk);
+    if (!thingtalk) {
+        console.log('Failed to parse the question. \n');
+        rl.prompt();
+        return;
+    }
+    
+    console.log('ThingTalk:', thingtalk);
+    try {
+        const sparql = await converter.convert(line, thingtalk);
+        console.log('SPARQL:', sparql);
         try {
-            const sparql = await converter.convert(line, thingtalk);
-            console.log('SPARQL:', sparql);
-            try {
-                const answers = await wikidata.query(sparql);
-                console.log('Answers:');
-                if (answers.length === 0) {
-                    console.log('None')
-                } else {
-                    for (const answer of answers.slice(0, 5)) {
-                        if (answer.startsWith('Q')) {
-                            const label = await wikidata.getLabel(answer);
-                            console.log(`${label} (${answer})`)
-                        } else {
-                            console.log(answer);
-                        }
-                    } 
-                    if (answers.length > 5)
-                        console.log(`and ${answers.length - 5} more ...`)
-                }
-            } catch (e) {
-                console.log('Failed to retrieve answers from Wikidata.')
-                console.log(e.message);
+            const answers = await wikidata.query(sparql);
+            console.log('Answers:');
+            if (answers.length === 0) {
+                console.log('None')
+            } else {
+                for (const answer of answers.slice(0, 5)) {
+                    if (answer.startsWith('Q')) {
+                        const label = await wikidata.getLabel(answer);
+                        console.log(`${label} (${answer})`)
+                    } else {
+                        console.log(answer);
+                    }
+                } 
+                if (answers.length > 5)
+                    console.log(`and ${answers.length - 5} more ...`)
             }
         } catch (e) {
-            console.log('Failed to convert thingtalk into SPARQL');
+            console.log('Failed to retrieve answers from Wikidata.')
+            console.log(e.message);
         }
-
-        console.log('\n');
-        rl.prompt();
-    });
-
-    function quit() {
-        rl.close();
+    } catch (e) {
+        console.log('Failed to convert thingtalk into SPARQL');
     }
-    rl.on('SIGINT', quit);
+
+    console.log('\n');
 }
 
 main();
