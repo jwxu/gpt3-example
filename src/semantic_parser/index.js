@@ -25,55 +25,93 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    var line = "who is the head of goverment of paris ?"
-    let thingtalk = null;
-    try {
-        const nlu_result = await Tp.Helpers.Http.post(NLU_SERVER, JSON.stringify({ q: line }), {
-            dataContentType: 'application/json'
-        });
-        const parsed = JSON.parse(nlu_result);
-        if (parsed && parsed.candidates && parsed.candidates.length > 0) 
-            thingtalk = parsed.candidates[0].code.join(' ');
-    } catch (e) {
-        console.log(e.message);
+    const fileStream = fs.createReadStream("../data/input/simple_questions.txt");
+
+    const rl = readline.createInterface({
+        input: fileStream,
+        crlfDelay: Infinity
+    });
+
+    var returnObj = {
+        data: []
     }
 
-    if (!thingtalk) {
-        console.log('Failed to parse the question. \n');
-        rl.prompt();
-        return;
-    }
-    
-    console.log('ThingTalk:', thingtalk);
-    try {
-        const sparql = await converter.convert(line, thingtalk);
-        console.log('SPARQL:', sparql);
+    for await (const line of rl) {
+        console.log(`Question: ${line}`);
+
+        let thingtalk_output = null;
+        let sparql_output = null;
+        let final_answer = null;
         try {
-            const answers = await wikidata.query(sparql);
-            console.log('Answers:');
-            if (answers.length === 0) {
-                console.log('None')
-            } else {
-                for (const answer of answers.slice(0, 5)) {
-                    if (answer.startsWith('Q')) {
-                        const label = await wikidata.getLabel(answer);
-                        console.log(`${label} (${answer})`)
-                    } else {
-                        console.log(answer);
-                    }
-                } 
-                if (answers.length > 5)
-                    console.log(`and ${answers.length - 5} more ...`)
-            }
+            const nlu_result = await Tp.Helpers.Http.post(NLU_SERVER, JSON.stringify({ q: line }), {
+                dataContentType: 'application/json'
+            });
+            const parsed = JSON.parse(nlu_result);
+            if (parsed && parsed.candidates && parsed.candidates.length > 0)
+                thingtalk_output = parsed.candidates[0].code.join(' ');
         } catch (e) {
-            console.log('Failed to retrieve answers from Wikidata.')
             console.log(e.message);
         }
-    } catch (e) {
-        console.log('Failed to convert thingtalk into SPARQL');
-    }
 
-    console.log('\n');
+        if (!thingtalk_output) {
+            console.log('Failed to parse the question. \n');
+            thingtalk_output = "Failed to parse the question."
+            rl.prompt();
+        } else {
+            console.log('ThingTalk:', thingtalk_output);
+            try {
+                sparql_output = await converter.convert(line, thingtalk_output);
+                console.log('SPARQL:', sparql_output);
+                try {
+                    const answers = await wikidata.query(sparql_output);
+                    console.log('Answers:');
+                    if (answers.length === 0) {
+                        final_answer = 'None'
+                        console.log('None')
+                    } else {
+                        for (const answer of answers.slice(0, 5)) {
+                            if (answer.startsWith('Q')) {
+                                const label = await wikidata.getLabel(answer);
+                                final_answer = label + " (" + answer + ")"
+                                console.log(`${label} (${answer})`)
+                            } else {
+                                final_answer = answer
+                                console.log(answer);
+                            }
+
+                        }
+                        if (answers.length > 5)
+                            console.log(`and ${answers.length - 5} more ...`)
+                    }
+                } catch (e) {
+                    const failed_wikidata_message = 'Failed to retrieve answers from Wikidata.';
+                    console.log(failed_wikidata_message);
+                    console.log(e.message);
+                    answer = failed_wikidata_message;
+                }
+            } catch (e) {
+                const failed_sparql_message = 'Failed to convert thingtalk into SPARQL';
+                console.log(failed_sparql_message);
+                sparql = failed_sparql_message;
+            }
+
+        }
+        console.log('\n');
+
+        returnObj.data.push({
+            question: line,
+            thingtalk: thingtalk_output,
+            sparql: sparql_output,
+            answer: final_answer
+        });
+
+    }
+    console.log(returnObj);
+
+    var json = JSON.stringify(returnObj);
+        fs.writeFile('../data/output/thingtalk_answer.json', json, 'utf8', function (err) {
+            if (err) {return console.error(err);};
+        });
 }
 
 main();
