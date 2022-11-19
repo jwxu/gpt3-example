@@ -50,16 +50,24 @@ def gen_question(args):
     neural_worker = NeuralWorker(prompt_template_file=args.prompt_template_file, engine=args.engine)
 
     question_gen = {}
+    question_gen['data'] = []
+    prev_reply = ""
     for question in tqdm(all_questions):
-        question_gen[question] = []
         for _ in range(args.num_gen):
+            question_para = {}
+            question_para["question"] = question
+
             filled_prompt = neural_worker.fill_prompt_template(history=question)
             reply = neural_worker.generate(input_text=filled_prompt, args=args, postprocess=True, max_tries=1)
             if len(reply) == 0:
                 # handle the case where the output of GPT-3 only contains whitespace, so the above function returns and empty string
                 print('Empty generated output. Stopping the dialog early.')
                 break
-            question_gen[question].append(reply)
+
+            if reply != prev_reply:
+                question_para['paraphrase'] = reply
+                question_gen['data'].append(question_para)
+                prev_reply = reply
 
     with open(args.output_file, 'w', encoding='utf-8') as f:
         json.dump(question_gen, f, ensure_ascii=False, indent=4)

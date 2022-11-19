@@ -1,6 +1,8 @@
 {
-    "who is the mayor of paris ?": [
-        "who is the current mayor of paris ?",
-        "Who is the head of the Parisian government?"
+    "data": [
+        {
+            "question": "who is the head of government of paris ?\n",
+            "paraphrase": "test paraphrase"
+        }
     ]
 }

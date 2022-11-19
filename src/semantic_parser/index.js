@@ -108,7 +108,7 @@ async function main() {
     }
     console.log(returnObj);
 
-    var json = JSON.stringify(returnObj);
+    var json = JSON.stringify(returnObj, null, 4);
         fs.writeFile('../data/output/thingtalk_answer.json', json, 'utf8', function (err) {
             if (err) {return console.error(err);};
         });
