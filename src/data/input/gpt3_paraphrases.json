@@ -3,7 +3,17 @@
         {
             "question": "who was the doctoral supervisor of albert einstein ?",
             "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
-            "paraphrase": "Who was the doctoral supervisor of Albert Einstein?"
+            "paraphrase": "Who was the person who supervised Albert Einstein's doctoral thesis?"
+        },
+        {
+            "question": "who was the doctoral supervisor of albert einstein ?",
+            "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
+            "paraphrase": "Who was the doctoral advisor of Albert Einstein?"
+        },
+        {
+            "question": "did kaurismäki ever win the grand prix at cannes ?",
+            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
+            "paraphrase": "Has Kaurismäki ever won the Grand Prix at Cannes?"
         },
         {
             "question": "did kaurismäki ever win the grand prix at cannes ?",
@@ -11,24 +21,19 @@
             "paraphrase": "Did Kaurismäki ever win the Grand Prix at Cannes?"
         },
         {
-            "question": "did kaurismäki ever win the grand prix at cannes ?",
-            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
-            "paraphrase": "Did Karismäki ever win the Grand Prix at Cannes?"
+            "question": "who wrote the song hotel california ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
+            "paraphrase": "Who composed the song \"Hotel California\" in the 1970s?"
         },
         {
             "question": "who wrote the song hotel california ?",
             "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
-            "paraphrase": "The song \"Hotel California\" was written by the band The Eagles."
+            "paraphrase": "Who composed the song \"Hotel California?"
         },
         {
             "question": "who wrote the song hotel california ?",
             "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
-            "paraphrase": "Who wrote the song \"Hotel California\"?"
-        },
-        {
-            "question": "who was on the apollo 11 mission ?",
-            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
-            "paraphrase": "Who were the individuals who traveled to the moon in 1969 on the Apollo 11 mission?"
+            "paraphrase": "Who wrote the song \"Hotel California\""
         },
         {
             "question": "who was on the apollo 11 mission ?",
@@ -38,42 +43,57 @@
         {
             "question": "which electronics companies were founded in beijing ?",
             "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
+            "paraphrase": "Which Chinese electronics companies were founded in Beijing?"
+        },
+        {
+            "question": "which electronics companies were founded in beijing ?",
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
+            "paraphrase": "Which electronics companies are headquartered in Beijing?"
+        },
+        {
+            "question": "which electronics companies were founded in beijing ?",
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
             "paraphrase": "Which electronics companies were founded in Beijing?"
         },
         {
             "question": "what is in a chocolate chip cookie ?",
             "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
-            "paraphrase": "What are the ingredients in a chocolate chip cookie?"
+            "paraphrase": "What is in a chocolate chip cookie?"
         },
         {
             "question": "what is in a chocolate chip cookie ?",
             "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
-            "paraphrase": "Chocolate chips are the main ingredient in a chocolate chip cookie."
+            "paraphrase": "What ingredients go into a chocolate chip cookie?"
         },
         {
             "question": "what is in a chocolate chip cookie ?",
             "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
-            "paraphrase": "What is inside a chocolate chip cookie?"
+            "paraphrase": "What ingredients are in a chocolate chip cookie?"
         },
         {
             "question": "was the wife of president lincoln called mary ?",
             "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
-            "paraphrase": "Yes, the wife of President Lincoln was called Mary."
+            "paraphrase": "Did Mary Lincoln marry Abraham Lincoln?"
         },
         {
             "question": "was the wife of president lincoln called mary ?",
             "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
-            "paraphrase": "Did Mary Lincoln also serve as First Lady of the United States?"
+            "paraphrase": "Did Mary Lincoln have a wife?"
         },
         {
             "question": "was the wife of president lincoln called mary ?",
             "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
-            "paraphrase": "Did President Lincoln's wife have the name \"Mary\"?"
+            "paraphrase": "What was the name of the wife of President Lincoln?"
         },
         {
             "question": "how many movies did park chan-wook direct ?",
             "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
-            "paraphrase": "How many films did Park Chan-wook direct?"
+            "paraphrase": "How many movies did Park Chan-wook direct?"
+        },
+        {
+            "question": "how many movies did park chan-wook direct ?",
+            "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
+            "paraphrase": "How many films has Park Chan-wook directed?"
         },
         {
             "question": "how many movies did park chan-wook direct ?",
@@ -83,17 +103,17 @@
         {
             "question": "in which united states state is mount mckinley located ?",
             "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
-            "paraphrase": "In which United States state is Mount McKinley located?"
+            "paraphrase": "Where is Mount McKinley located in the United States?"
         },
         {
             "question": "in which united states state is mount mckinley located ?",
             "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
-            "paraphrase": "In which US state is Mount McKinley located?"
+            "paraphrase": "In which state is Mount McKinley located?"
         },
         {
             "question": "in which united states state is mount mckinley located ?",
             "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
-            "paraphrase": "In which United States state is Mount McKinley located?"
+            "paraphrase": "In which U.S. state is Mount McKinley located?"
         },
         {
             "question": "which indian company has the most employees ?",
@@ -103,57 +123,32 @@
         {
             "question": "in which school did obama ' s wife study ?",
             "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
+            "paraphrase": "What school did Michelle Obama study at?"
+        },
+        {
+            "question": "in which school did obama ' s wife study ?",
+            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
             "paraphrase": "Where did Obama's wife study?"
         },
         {
-            "question": "in which school did obama ' s wife study ?",
-            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
-            "paraphrase": "Which school did Obama's wife study at?"
-        },
-        {
-            "question": "in which school did obama ' s wife study ?",
-            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
-            "paraphrase": "What school did Barack Obama's wife study at?"
+            "question": "where does piccadilly start ?",
+            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
+            "paraphrase": "Where is Piccadilly Circus?"
         },
         {
             "question": "where does piccadilly start ?",
             "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
-            "paraphrase": "Piccadilly starts at Leicester Square."
+            "paraphrase": "What is the name of the street that starts at Piccadilly Circus?"
         },
         {
             "question": "where does piccadilly start ?",
             "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
-            "paraphrase": "Piccadilly starts at Piccadilly Circus."
-        },
-        {
-            "question": "where does piccadilly start ?",
-            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
-            "paraphrase": "Where does Piccadilly Street start?"
+            "paraphrase": "What is the beginning of Piccadilly?"
         },
         {
             "question": "what is the capital of cameroon ?",
             "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;",
             "paraphrase": "What is the capital of Cameroon?"
-        },
-        {
-            "question": "when did the boston tea party take place ?",
-            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
-            "paraphrase": "When did the Boston Tea Party take place?"
-        },
-        {
-            "question": "who played gus fring in breaking bad ?",
-            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
-            "paraphrase": "Who played the role of Gus Fring in Breaking Bad?"
-        },
-        {
-            "question": "who played gus fring in breaking bad ?",
-            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
-            "paraphrase": "In Breaking Bad, Gus Fring was played by Giancarlo Esposito."
-        },
-        {
-            "question": "who played gus fring in breaking bad ?",
-            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
-            "paraphrase": "Who played Gus Fring in Breaking Bad?"
         }
     ]
 }

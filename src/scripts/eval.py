@@ -24,6 +24,8 @@ def get_query_accuracy(file):
         total += 1
 
     accuracy = correct / total
+    print("Correct: ", correct)
+    print("Total: ", total)
     print("Accuracy: ", accuracy)
     return accuracy
 

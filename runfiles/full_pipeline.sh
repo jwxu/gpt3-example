@@ -33,9 +33,9 @@ python src/scripts/gen_gpt_input.py \
 #     ]
 # }
 python src/generator.py \
-    --prompt_template_file "src/data/prompts/thingtalk_paraphrase.prompt" \
-    --input_file "src/data/input/thingtalk_paraphrases.json" \
-    --output_file "src/data/input/gpt3_thingtalk_paraphrases.json" \
+    --prompt_template_file "src/data/prompts/paraphrase.prompt" \
+    --input_file "src/data/input/paraphrases.json" \
+    --output_file "src/data/input/gpt3_paraphrases.json" \
     --engine text-curie-001 \
     --num_gen 3
 
@@ -63,4 +63,4 @@ python src/generator.py \
 
 # Output question query accuracy
 python src/scripts/eval.py \
-    --input_file "src/data/output/thingtalk_answer.json"
+    --input_file "src/data/output/paraphrase_answer.json"
