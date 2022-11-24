@@ -12,12 +12,12 @@
 #     ]
 # }
 # Output: Text file of list of questions
-python src/scripts/gen_gpt_input.py \
+python src/utils/gen_gpt_input.py \
     --input "src/data/training_files/fewshot.json" \
     --output_file "src/data/input/thingtalk_paraphrases.json" \
     --use_thingtalk
 
-python src/scripts/gen_gpt_input.py \
+python src/utils/gen_gpt_input.py \
     --input "src/data/training_files/fewshot.json" \
     --output_file "src/data/input/paraphrases.json"
 
@@ -62,5 +62,5 @@ python src/generator.py \
 # node index.js
 
 # Output question query accuracy
-python src/scripts/eval.py \
+python src/utils/eval.py \
     --input_file "src/data/output/paraphrase_answer.json"
