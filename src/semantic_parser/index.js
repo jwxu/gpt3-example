@@ -25,27 +25,19 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-//    const fileStream = fs.createReadStream("../data/input/simple_questions.txt");
-
     const fileStream = JSON.parse(fs.readFileSync("../data/training_files/fewshot.json", { encoding: 'utf8' })).data;
-//
-//    const rl = readline.createInterface({
-//        input: fileStream,
-//        crlfDelay: Infinity
-//    });
 
     var returnObj = {
         data: []
     }
 
-//    for await (const line of rl) {
-    fileStream.forEach(async data => {
+    for await (const data of fileStream) {
         const line = data["Question"]
         console.log(`Question: ${line}`);
 
         let thingtalk_output = null;
         let sparql_output = null;
-        let final_answer = null;
+        let final_answer = '';
         try {
             const nlu_result = await Tp.Helpers.Http.post(NLU_SERVER, JSON.stringify({ q: line }), {
                 dataContentType: 'application/json'
@@ -54,13 +46,12 @@ async function main() {
             if (parsed && parsed.candidates && parsed.candidates.length > 0)
                 thingtalk_output = parsed.candidates[0].code.join(' ');
         } catch (e) {
-            console.log(e.message);
+            console.log(`Catch nlu_result: ${e.message}`);
         }
 
         if (!thingtalk_output) {
             console.log('Failed to parse the question. \n');
             thingtalk_output = "Failed to parse the question.";
-//            rl.prompt();
         } else {
             console.log('ThingTalk:', thingtalk_output);
             try {
@@ -73,19 +64,32 @@ async function main() {
                         final_answer = 'None';
                         console.log('None');
                     } else {
-                        for (const answer of answers.slice(0, 5)) {
+                        if (answers.length === 1) {
+                            const answer = answers[0];
                             if (answer.startsWith('Q')) {
                                 const label = await wikidata.getLabel(answer);
-                                final_answer = label + " (" + answer + ")";
+                                final_answer += label + " (" + answer + ")";
                                 console.log(`${label} (${answer})`);
-                            } else {
-                                final_answer = answer;
-                                console.log(answer);
                             }
+                        } else {
+                            for (const answer of answers.slice(0, 5)) {
+                                if (answer.startsWith('Q')) {
+                                    const label = await wikidata.getLabel(answer);
+                                    final_answer += label + " (" + answer + ")" + '\n';
+                                    console.log(`${label} (${answer})`);
+                                } else {
+                                    final_answer = answer;
+                                    console.log(answer);
+                                }
 
+                            }
                         }
-                        if (answers.length > 5)
-                            console.log(`and ${answers.length - 5} more ...`)
+
+                        if (answers.length > 5) {
+                            let rem_length = answers.length - 5;
+                            final_answer += "and " + rem_length + " more ...";
+                            console.log(`and ${rem_length} more ...`);
+                        }
                     }
                 } catch (e) {
                     const failed_wikidata_message = 'Failed to retrieve answers from Wikidata.';
@@ -96,7 +100,7 @@ async function main() {
             } catch (e) {
                 const failed_sparql_message = 'Failed to convert thingtalk into SPARQL';
                 console.log(failed_sparql_message);
-                sparql = failed_sparql_message;
+                sparql_output = failed_sparql_message;
             }
 
         }
@@ -104,13 +108,12 @@ async function main() {
 
         returnObj.data.push({
             question: line,
+            gold: data["Gold"],
             thingtalk: thingtalk_output,
             sparql: sparql_output,
             answer: final_answer
         });
-//    }
-    });
-    console.log(returnObj);
+    }
 
     var json = JSON.stringify(returnObj, null, 4);
         fs.writeFile('../data/output/thingtalk_answer.json', json, 'utf8', function (err) {
