@@ -1,0 +1,404 @@
+{
+    "data": [
+        {
+            "question": "what was the first queen album ?",
+            "paraphrase": "what was the first queen album ?",
+            "gold": "sort ( publication_date asc of @wd . entity ( ) filter contains ( performer , \" Q15862 \" ^^wd:entity ) && instance_of == \" Q482994 \" ^^wd:domain ) [ 1 ] ;",
+            "thingtalk": "@wd . entity ( ) filter id == \" Q15862 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT null WHERE {  }",
+            "answer": "None"
+        },
+        {
+            "question": "did elvis presley have children ?",
+            "paraphrase": "did elvis presley have children ?",
+            "gold": "[ count ( child ) >= 1 ] of @wd . entity ( ) filter id == \" Q303 \" ^^wd:entity ;",
+            "thingtalk": "[ count ( child ) >= 1 ] of @wd . entity ( ) filter id == \" Q303 \" ^^wd:entity ;",
+            "sparql": "ASK WHERE { <http://www.wikidata.org/entity/Q303> <http://www.wikidata.org/prop/direct/P40> ?x. }",
+            "answer": ""
+        },
+        {
+            "question": "give me a list of all canadians that reside in the united states",
+            "paraphrase": "give me a list of all canadians that reside in the united states",
+            "gold": "@wd . entity ( ) filter contains ( < place_of_birth / country > , \" Q16 \" ^^wd:entity ) && contains ( residence , \" Q30 \" ^^wd:entity ) ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "where is syngman rhee buried ?",
+            "paraphrase": "where is syngman rhee buried ?",
+            "gold": "[ place_of_burial ] of @wd . entity ( ) filter id == \" Q171684 \" ^^wd:entity ;",
+            "thingtalk": "[ place_of_burial ] of @wd . entity ( ) filter id == \" Q171684 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q171684> <http://www.wikidata.org/prop/direct/P119> ?x. }",
+            "answer": "Seoul National Cemetery (Q488897)"
+        },
+        {
+            "question": "in which countries do people speak japanese ?",
+            "paraphrase": "in which countries do people speak japanese ?",
+            "gold": "@wd . country ( ) filter contains ( official_language , \" Q5287 \" ^^wd:entity ) ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "who is the king of the netherlands ?",
+            "paraphrase": "who is the king of the netherlands ?",
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q2045066 \" ^^wd:entity ) ;",
+            "thingtalk": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q302958 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q302958> <http://www.wikidata.org/prop/direct/P35> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "who produced the most films ?",
+            "paraphrase": "who produced the most films ?",
+            "gold": "[ producer ] of sort ( count desc of count ( @wd . film ( ) ) by producer ) [ 1 ] ;",
+            "thingtalk": "[ producer ] of sort ( count ( director ) desc of @wd . film ( ) ) [ 1 ] ;",
+            "sparql": "Failed to convert thingtalk into SPARQL",
+            "answer": ""
+        },
+        {
+            "question": "show me all czech movies .",
+            "paraphrase": "show me all czech movies .",
+            "gold": "@wd . film ( ) filter contains ( country_of_origin , \" Q213 \" ^^wd:entity ) || contains ( country_of_origin , \" Q33946 \" ^^wd:entity ) ;",
+            "thingtalk": "@wd . entity ( ) filter id == \" Q104810552 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT null WHERE {  }",
+            "answer": "None"
+        },
+        {
+            "question": "which rivers flow into the north sea ?",
+            "paraphrase": "which rivers flow into the north sea ?",
+            "gold": "@wd . river ( ) filter contains ( mouth_of_the_watercourse , \" Q1693 \" ^^wd:entity ) ;",
+            "thingtalk": "@wd . river ( ) filter contains ( tributary , \" Q1693 \" ^^wd:entity ) ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q4022>. ?x <http://www.wikidata.org/prop/direct/P974> <http://www.wikidata.org/entity/Q1693>. }",
+            "answer": "None"
+        },
+        {
+            "question": "when did operation overlord commence ?",
+            "paraphrase": "when did operation overlord commence ?",
+            "gold": "[ start_time ] of @wd . entity ( ) filter id == \" Q8641370 \" ^^wd:entity ;",
+            "thingtalk": "[ start_time ] of @wd . entity ( ) filter id == \" Q8641370 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q8641370> <http://www.wikidata.org/prop/direct/P580> ?x. }",
+            "answer": ""
+        },
+        {
+            "question": "where do the red sox play ?",
+            "paraphrase": "where do the red sox play ?",
+            "gold": "[ home_venue ] of @wd . entity ( ) filter id == \" Q213959 \" ^^wd:entity ;",
+            "thingtalk": "[ sport ] of @wd . entity ( ) filter id == \" Q213959 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q213959> <http://www.wikidata.org/prop/direct/P641> ?x. }",
+            "answer": "baseball (Q5369)"
+        },
+        {
+            "question": "in which time zone is rome ?",
+            "paraphrase": "in which time zone is rome ?",
+            "gold": "[ located_in_time_zone ] of @wd . entity ( ) filter id == \" Q220 \" ^^wd:entity ;",
+            "thingtalk": "[ located_in_time_zone ] of @wd . entity ( ) filter id == \" Q104810552 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q104810552> <http://www.wikidata.org/prop/direct/P421> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "give me a list of all critically endangered birds .",
+            "paraphrase": "give me a list of all critically endangered birds .",
+            "gold": "@wd . entity ( ) filter contains ( < parent_taxon * > , \" Q5113 \" ^^wd:entity ) && contains ( iucn_conservation_status , \" Q219127 \" ^^wd:entity ) ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "how much did the lego movie cost ?",
+            "paraphrase": "how much did the lego movie cost ?",
+            "gold": "[ cost ] of @wd . entity ( ) filter id == \" Q2608065 \" ^^wd:entity ;",
+            "thingtalk": "[ cost ] of @wd . entity ( ) filter id == \" Q170484 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q170484> <http://www.wikidata.org/prop/direct/P2130> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what was the original occupation of the inventor of lego ?",
+            "paraphrase": "what was the original occupation of the inventor of lego ?",
+            "gold": "[ < discoverer_or_inventor / occupation > ] of @wd . entity ( ) filter id == \" Q170484 \" ^^wd:entity ;",
+            "thingtalk": "[ occupation ] of @wd . entity ( ) filter id == \" Q170484 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q170484> <http://www.wikidata.org/prop/direct/P106> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "which countries have more than ten volcanoes ?",
+            "paraphrase": "which countries have more than ten volcanoes ?",
+            "gold": "count ( @wd . entity ( ) filter instance_of == \" Q8072 \" ^^wd:domain ) by country filter count >= 10 ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "show me all united states states .",
+            "paraphrase": "show me all united states states .",
+            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q35657 \" ^^wd:domain ;",
+            "thingtalk": "@wd . country ( ) ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q6256>. }",
+            "answer": "South Africa (Q258)\nAlgeria (Q262)\nUzbekistan (Q265)\nChile (Q298)\nSingapore (Q334)\nand 639 more ..."
+        },
+        {
+            "question": "who wrote the game of thrones theme ?",
+            "paraphrase": "who wrote the game of thrones theme ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q23572 \" ^^wd:entity ;",
+            "thingtalk": "[ composer ] of @wd . entity ( ) filter id == \" Q27813929 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q27813929> <http://www.wikidata.org/prop/direct/P86> ?x. }",
+            "answer": "Ramin Djawadi (Q57577)"
+        },
+        {
+            "question": "give me all films produced by hal roach .",
+            "paraphrase": "give me all films produced by hal roach .",
+            "gold": "@wd . film ( ) filter contains ( producer , \" Q72792 \" ^^wd:entity ) ;",
+            "thingtalk": "@wd . film ( ) filter contains ( director , \" Q72792 \" ^^wd:entity ) ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q11424>. ?x <http://www.wikidata.org/prop/direct/P57> <http://www.wikidata.org/entity/Q72792>. }",
+            "answer": "One Million B.C. (Q375321)\nSwiss Miss (Q524323)\nNow or Never (Q601039)\nThe Bohemian Girl (Q1169905)\nCaptain Fury (Q1415798)\nand 129 more ..."
+        },
+        {
+            "question": "in which films did julia roberts as well as richard gere play ?",
+            "paraphrase": "in which films did julia roberts as well as richard gere play ?",
+            "gold": "@wd . film ( ) filter contains ( cast_member , \" Q48410 \" ^^wd:entity ) && contains ( cast_member , \" Q40523 \" ^^wd:entity ) ;",
+            "thingtalk": "[ cast_member ] of @wd . entity ( ) filter id == \" Q40523 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q40523> <http://www.wikidata.org/prop/direct/P161> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "when was olof palme shot ?",
+            "paraphrase": "when was olof palme shot ?",
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q53713 \" ^^wd:entity ;",
+            "thingtalk": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q53713 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q53713> <http://www.wikidata.org/prop/direct/P585> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "how many emperors did china have ?",
+            "paraphrase": "how many emperors did china have ?",
+            "gold": "count ( @wd . entity ( ) filter contains ( position_held , \" Q268218 \" ^^wd:entity ) ) ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "show me the book that muhammad ali wrote .",
+            "paraphrase": "show me the book that muhammad ali wrote .",
+            "gold": "@wd . book ( ) filter contains ( author , \" Q36107 \" ^^wd:entity ) ;",
+            "thingtalk": "[ published_in ] of @wd . entity ( ) filter id == \" Q36107 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q36107> <http://www.wikidata.org/prop/direct/P1433> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "which country has the most official languages ?",
+            "paraphrase": "which country has the most official languages ?",
+            "gold": "sort ( count ( official_language ) desc of @wd . country ( ) ) [ 1 ] ;",
+            "thingtalk": "sort ( count ( official_language ) desc of @wd . country ( ) ) [ 1 ] ;",
+            "sparql": "Failed to convert thingtalk into SPARQL",
+            "answer": ""
+        },
+        {
+            "question": "how did michael jackson die ?",
+            "paraphrase": "how did michael jackson die ?",
+            "gold": "[ cause_of_death ] of @wd . entity ( ) filter id == \" Q2831 \" ^^wd:entity ;",
+            "thingtalk": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q2831 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q2831> <http://www.wikidata.org/prop/direct/P570> ?x. }",
+            "answer": ""
+        },
+        {
+            "question": "which space probes were sent into orbit around the sun ?",
+            "paraphrase": "which space probes were sent into orbit around the sun ?",
+            "gold": "@wd . entity ( ) filter contains ( type_of_orbit , \" Q737809 \" ^^wd:entity ) ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "who produced films starring natalie portman ?",
+            "paraphrase": "who produced films starring natalie portman ?",
+            "gold": "[ producer ] of @wd . film ( ) filter contains ( cast_member , \" Q37876 \" ^^wd:entity ) ;",
+            "thingtalk": "[ producer ] of @wd . entity ( ) filter id == \" Q37876 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q37876> <http://www.wikidata.org/prop/direct/P162> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what is the biggest stadium in spain ?",
+            "paraphrase": "what is the biggest stadium in spain ?",
+            "gold": "sort ( maximum_capacity desc of @wd . stadium ( ) filter contains ( country , \" Q29 \" ^^wd:entity ) ) [ 1 ] ;",
+            "thingtalk": "sort ( maximum_capacity desc of @wd . stadium ( ) ) [ 1 ] ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q483110>. ?x <http://www.wikidata.org/prop/direct/P1083> ?y. } ORDER BY DESC(?y) LIMIT 1",
+            "answer": "Douera Stadium (Q5300222)"
+        },
+        {
+            "question": "on which day is columbus day ?",
+            "paraphrase": "on which day is columbus day ?",
+            "gold": "[ day_in_year_for_periodic_occurrence ] of @wd . entity ( ) filter id == \" Q367523 \" ^^wd:entity ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "how short is the shortest active nba player ?",
+            "paraphrase": "how short is the shortest active nba player ?",
+            "gold": "[ height ] of sort ( height asc of @wd . entity ( ) filter contains ( < member_of_sports_team / league > , \" Q155223 \" ^^wd:entity ) && contains ( occupation , \" Q3665646 \" ^^wd:entity ) ) [ 1 ] ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "whom did lance bass marry ?",
+            "paraphrase": "whom did lance bass marry ?",
+            "gold": "[ spouse ] of @wd . entity ( ) filter id == \" Q443120 \" ^^wd:entity ;",
+            "thingtalk": "[ spouse ] of @wd . entity ( ) filter id == \" Q443120 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q443120> <http://www.wikidata.org/prop/direct/P26> ?x. }",
+            "answer": "Michael Turchin (Q19668300)"
+        },
+        {
+            "question": "what form of government does russia have ?",
+            "paraphrase": "what form of government does russia have ?",
+            "gold": "[ basic_form_of_government ] of @wd . entity ( ) filter id == \" Q159 \" ^^wd:entity ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "what movies does jesse eisenberg play in ?",
+            "paraphrase": "what movies does jesse eisenberg play in ?",
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q219512 \" ^^wd:entity ) ;",
+            "thingtalk": "[ cast_member ] of @wd . entity ( ) filter id == \" Q27961909 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q27961909> <http://www.wikidata.org/prop/direct/P161> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "give me all soccer clubs in the premier league .",
+            "paraphrase": "give me all soccer clubs in the premier league .",
+            "gold": "@wd . entity ( ) filter contains ( league , \" Q9448 \" ^^wd:entity ) && instance_of == \" Q476028 \" ^^wd:domain ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "show me all museums in london .",
+            "paraphrase": "show me all museums in london .",
+            "gold": "@wd . museum ( ) filter contains ( location , \" Q84 \" ^^wd:entity ) ;",
+            "thingtalk": "@wd . entity ( ) filter id == \" Q1863860 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT null WHERE {  }",
+            "answer": "None"
+        },
+        {
+            "question": "give me all south american countries .",
+            "paraphrase": "give me all south american countries .",
+            "gold": "@wd . country ( ) filter contains ( continent , \" Q18 \" ^^wd:entity ) ;",
+            "thingtalk": "@wd . country ( ) ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q6256>. }",
+            "answer": "South Africa (Q258)\nAlgeria (Q262)\nUzbekistan (Q265)\nChile (Q298)\nSingapore (Q334)\nand 639 more ..."
+        },
+        {
+            "question": "which pope succeeded john paul ii ?",
+            "paraphrase": "which pope succeeded john paul ii ?",
+            "gold": "[ replaced_by of ( position_held filter value == \" Q19546 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q989 \" ^^wd:entity ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "who is the son of sonny and cher ?",
+            "paraphrase": "who is the son of sonny and cher ?",
+            "gold": "@wd . entity ( ) filter contains ( father , \" Q179150 \" ^^wd:entity ) && contains ( mother , \" Q12003 \" ^^wd:entity ) ;",
+            "thingtalk": "[ father ] of @wd . entity ( ) filter id == \" Q907445 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q907445> <http://www.wikidata.org/prop/direct/P22> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what are the five boroughs of new york ?",
+            "paraphrase": "what are the five boroughs of new york ?",
+            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q408804 \" ^^wd:domain ;",
+            "thingtalk": "@wd . entity ( ) filter id == \" Q408804 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT null WHERE {  }",
+            "answer": "None"
+        },
+        {
+            "question": "show me hemingway ' s autobiography .",
+            "paraphrase": "show me hemingway ' s autobiography .",
+            "gold": "@wd . entity ( ) filter contains ( author , \" Q23434 \" ^^wd:entity ) && contains ( genre , \" Q4184 \" ^^wd:entity ) ;",
+            "thingtalk": "[ published_in ] of @wd . entity ( ) filter id == \" Q6100293 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q6100293> <http://www.wikidata.org/prop/direct/P1433> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what kind of music did lou reed play ?",
+            "paraphrase": "what kind of music did lou reed play ?",
+            "gold": "[ genre ] of @wd . entity ( ) filter id == \" Q189080 \" ^^wd:entity ;",
+            "thingtalk": "[ genre ] of @wd . entity ( ) filter id == \" Q189080 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q189080> <http://www.wikidata.org/prop/direct/P136> ?x. }",
+            "answer": "glam rock (Q76092)\nnoise rock (Q181861)\nfolk rock (Q186472)\npsychedelic rock (Q206159)\nart rock (Q217467)\nand 7 more ..."
+        },
+        {
+            "question": "in which city does sylvester stallone live ?",
+            "paraphrase": "in which city does sylvester stallone live ?",
+            "gold": "[ residence : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q40026 \" ^^wd:entity ;",
+            "thingtalk": "[ < place_of_habitation / place_of_work > ] of @wd . entity ( ) filter id == \" Q40026 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q40026> <http://www.wikidata.org/prop/direct/undefined>/<http://www.wikidata.org/prop/direct/undefined> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "who was vincent van gogh inspired by ?",
+            "paraphrase": "who was vincent van gogh inspired by ?",
+            "gold": "[ influenced_by ] of @wd . entity ( ) filter id == \" Q5582 \" ^^wd:entity ;",
+            "thingtalk": "[ influenced_by ] of @wd . entity ( ) filter id == \" Q5582 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q5582> <http://www.wikidata.org/prop/direct/P737> ?x. }",
+            "answer": "Jean-François Millet (Q148458)\nAnton Mauve (Q591907)\nWillem Roelofs (Q1372280)\nPeter Paul Rubens (Q5599)\nPaul Cézanne (Q35548)\nand 1 more ..."
+        },
+        {
+            "question": "what are the names of the teenage mutant ninja turtles ?",
+            "paraphrase": "what are the names of the teenage mutant ninja turtles ?",
+            "gold": "@wd . entity ( ) filter contains ( part_of , \" Q1381762 \" ^^wd:entity ) ;",
+            "thingtalk": "[ official_name ] of @wd . entity ( ) filter id == \" Q1381762 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q1381762> <http://www.wikidata.org/prop/direct/P1448> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what are the zodiac signs ?",
+            "paraphrase": "what are the zodiac signs ?",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q40540 \" ^^wd:entity ;",
+            "thingtalk": "Failed to parse the question.",
+            "sparql": null,
+            "answer": ""
+        },
+        {
+            "question": "what languages do they speak in pakistan ?",
+            "paraphrase": "what languages do they speak in pakistan ?",
+            "gold": "[ official_language ] of @wd . entity ( ) filter id == \" Q843 \" ^^wd:entity ;",
+            "thingtalk": "[ official_language ] of @wd . entity ( ) filter id == \" Q843 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q843> <http://www.wikidata.org/prop/direct/P37> ?x. }",
+            "answer": "Urdu (Q1617)"
+        },
+        {
+            "question": "who became president after jfk died ?",
+            "paraphrase": "who became president after jfk died ?",
+            "gold": "[ replaced_by of ( position_held filter value == \" Q11696 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q9696 \" ^^wd:entity ;",
+            "thingtalk": "[ < head_of_state / replaced > ] of @wd . entity ( ) filter id == \" Q11696 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q11696> <http://www.wikidata.org/prop/direct/P35>/<http://www.wikidata.org/prop/direct/undefined> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "in what city is the heineken brewery ?",
+            "paraphrase": "in what city is the heineken brewery ?",
+            "gold": "[ < manufacturer / headquarters_location > ] of @wd . entity ( ) filter id == \" Q854383 \" ^^wd:entity ;",
+            "thingtalk": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q180855 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q180855> <http://www.wikidata.org/prop/direct/P131>+ ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what is elon musk famous for ?",
+            "paraphrase": "what is elon musk famous for ?",
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q317521 \" ^^wd:entity ;",
+            "thingtalk": "[ notable_work ] of @wd . entity ( ) filter id == \" Q317521 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q317521> <http://www.wikidata.org/prop/direct/P800> ?x. }",
+            "answer": "None"
+        },
+        {
+            "question": "what is batman ' s real name ?",
+            "paraphrase": "what is batman ' s real name ?",
+            "gold": "[ said_to_be_the_same_as ] of @wd . entity ( ) filter id == \" Q2695156 \" ^^wd:entity ;",
+            "thingtalk": "[ given_name ] of @wd . entity ( ) filter id == \" Q2695156 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q2695156> <http://www.wikidata.org/prop/direct/P735> ?x. }",
+            "answer": "Bruce (Q579371)"
+        }
+    ]
+}

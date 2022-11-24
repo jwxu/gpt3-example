@@ -1,0 +1,204 @@
+{
+    "data": [
+        {
+            "question": "what was the first queen album ?",
+            "gold": "sort ( publication_date asc of @wd . entity ( ) filter contains ( performer , \" Q15862 \" ^^wd:entity ) && instance_of == \" Q482994 \" ^^wd:domain ) [ 1 ] ;"
+        },
+        {
+            "question": "did elvis presley have children ?",
+            "gold": "[ count ( child ) >= 1 ] of @wd . entity ( ) filter id == \" Q303 \" ^^wd:entity ;"
+        },
+        {
+            "question": "give me a list of all canadians that reside in the united states",
+            "gold": "@wd . entity ( ) filter contains ( < place_of_birth / country > , \" Q16 \" ^^wd:entity ) && contains ( residence , \" Q30 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "where is syngman rhee buried ?",
+            "gold": "[ place_of_burial ] of @wd . entity ( ) filter id == \" Q171684 \" ^^wd:entity ;"
+        },
+        {
+            "question": "in which countries do people speak japanese ?",
+            "gold": "@wd . country ( ) filter contains ( official_language , \" Q5287 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "who is the king of the netherlands ?",
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q2045066 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "who produced the most films ?",
+            "gold": "[ producer ] of sort ( count desc of count ( @wd . film ( ) ) by producer ) [ 1 ] ;"
+        },
+        {
+            "question": "show me all czech movies .",
+            "gold": "@wd . film ( ) filter contains ( country_of_origin , \" Q213 \" ^^wd:entity ) || contains ( country_of_origin , \" Q33946 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "which rivers flow into the north sea ?",
+            "gold": "@wd . river ( ) filter contains ( mouth_of_the_watercourse , \" Q1693 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "when did operation overlord commence ?",
+            "gold": "[ start_time ] of @wd . entity ( ) filter id == \" Q8641370 \" ^^wd:entity ;"
+        },
+        {
+            "question": "where do the red sox play ?",
+            "gold": "[ home_venue ] of @wd . entity ( ) filter id == \" Q213959 \" ^^wd:entity ;"
+        },
+        {
+            "question": "in which time zone is rome ?",
+            "gold": "[ located_in_time_zone ] of @wd . entity ( ) filter id == \" Q220 \" ^^wd:entity ;"
+        },
+        {
+            "question": "give me a list of all critically endangered birds .",
+            "gold": "@wd . entity ( ) filter contains ( < parent_taxon * > , \" Q5113 \" ^^wd:entity ) && contains ( iucn_conservation_status , \" Q219127 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "how much did the lego movie cost ?",
+            "gold": "[ cost ] of @wd . entity ( ) filter id == \" Q2608065 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what was the original occupation of the inventor of lego ?",
+            "gold": "[ < discoverer_or_inventor / occupation > ] of @wd . entity ( ) filter id == \" Q170484 \" ^^wd:entity ;"
+        },
+        {
+            "question": "which countries have more than ten volcanoes ?",
+            "gold": "count ( @wd . entity ( ) filter instance_of == \" Q8072 \" ^^wd:domain ) by country filter count >= 10 ;"
+        },
+        {
+            "question": "show me all united states states .",
+            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q35657 \" ^^wd:domain ;"
+        },
+        {
+            "question": "who wrote the game of thrones theme ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q23572 \" ^^wd:entity ;"
+        },
+        {
+            "question": "give me all films produced by hal roach .",
+            "gold": "@wd . film ( ) filter contains ( producer , \" Q72792 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "in which films did julia roberts as well as richard gere play ?",
+            "gold": "@wd . film ( ) filter contains ( cast_member , \" Q48410 \" ^^wd:entity ) && contains ( cast_member , \" Q40523 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "when was olof palme shot ?",
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q53713 \" ^^wd:entity ;"
+        },
+        {
+            "question": "how many emperors did china have ?",
+            "gold": "count ( @wd . entity ( ) filter contains ( position_held , \" Q268218 \" ^^wd:entity ) ) ;"
+        },
+        {
+            "question": "show me the book that muhammad ali wrote .",
+            "gold": "@wd . book ( ) filter contains ( author , \" Q36107 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "which country has the most official languages ?",
+            "gold": "sort ( count ( official_language ) desc of @wd . country ( ) ) [ 1 ] ;"
+        },
+        {
+            "question": "how did michael jackson die ?",
+            "gold": "[ cause_of_death ] of @wd . entity ( ) filter id == \" Q2831 \" ^^wd:entity ;"
+        },
+        {
+            "question": "which space probes were sent into orbit around the sun ?",
+            "gold": "@wd . entity ( ) filter contains ( type_of_orbit , \" Q737809 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "who produced films starring natalie portman ?",
+            "gold": "[ producer ] of @wd . film ( ) filter contains ( cast_member , \" Q37876 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "what is the biggest stadium in spain ?",
+            "gold": "sort ( maximum_capacity desc of @wd . stadium ( ) filter contains ( country , \" Q29 \" ^^wd:entity ) ) [ 1 ] ;"
+        },
+        {
+            "question": "on which day is columbus day ?",
+            "gold": "[ day_in_year_for_periodic_occurrence ] of @wd . entity ( ) filter id == \" Q367523 \" ^^wd:entity ;"
+        },
+        {
+            "question": "how short is the shortest active nba player ?",
+            "gold": "[ height ] of sort ( height asc of @wd . entity ( ) filter contains ( < member_of_sports_team / league > , \" Q155223 \" ^^wd:entity ) && contains ( occupation , \" Q3665646 \" ^^wd:entity ) ) [ 1 ] ;"
+        },
+        {
+            "question": "whom did lance bass marry ?",
+            "gold": "[ spouse ] of @wd . entity ( ) filter id == \" Q443120 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what form of government does russia have ?",
+            "gold": "[ basic_form_of_government ] of @wd . entity ( ) filter id == \" Q159 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what movies does jesse eisenberg play in ?",
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q219512 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "give me all soccer clubs in the premier league .",
+            "gold": "@wd . entity ( ) filter contains ( league , \" Q9448 \" ^^wd:entity ) && instance_of == \" Q476028 \" ^^wd:domain ;"
+        },
+        {
+            "question": "show me all museums in london .",
+            "gold": "@wd . museum ( ) filter contains ( location , \" Q84 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "give me all south american countries .",
+            "gold": "@wd . country ( ) filter contains ( continent , \" Q18 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "which pope succeeded john paul ii ?",
+            "gold": "[ replaced_by of ( position_held filter value == \" Q19546 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q989 \" ^^wd:entity ;"
+        },
+        {
+            "question": "who is the son of sonny and cher ?",
+            "gold": "@wd . entity ( ) filter contains ( father , \" Q179150 \" ^^wd:entity ) && contains ( mother , \" Q12003 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "what are the five boroughs of new york ?",
+            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q408804 \" ^^wd:domain ;"
+        },
+        {
+            "question": "show me hemingway ' s autobiography .",
+            "gold": "@wd . entity ( ) filter contains ( author , \" Q23434 \" ^^wd:entity ) && contains ( genre , \" Q4184 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "what kind of music did lou reed play ?",
+            "gold": "[ genre ] of @wd . entity ( ) filter id == \" Q189080 \" ^^wd:entity ;"
+        },
+        {
+            "question": "in which city does sylvester stallone live ?",
+            "gold": "[ residence : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q40026 \" ^^wd:entity ;"
+        },
+        {
+            "question": "who was vincent van gogh inspired by ?",
+            "gold": "[ influenced_by ] of @wd . entity ( ) filter id == \" Q5582 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what are the names of the teenage mutant ninja turtles ?",
+            "gold": "@wd . entity ( ) filter contains ( part_of , \" Q1381762 \" ^^wd:entity ) ;"
+        },
+        {
+            "question": "what are the zodiac signs ?",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q40540 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what languages do they speak in pakistan ?",
+            "gold": "[ official_language ] of @wd . entity ( ) filter id == \" Q843 \" ^^wd:entity ;"
+        },
+        {
+            "question": "who became president after jfk died ?",
+            "gold": "[ replaced_by of ( position_held filter value == \" Q11696 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q9696 \" ^^wd:entity ;"
+        },
+        {
+            "question": "in what city is the heineken brewery ?",
+            "gold": "[ < manufacturer / headquarters_location > ] of @wd . entity ( ) filter id == \" Q854383 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what is elon musk famous for ?",
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q317521 \" ^^wd:entity ;"
+        },
+        {
+            "question": "what is batman ' s real name ?",
+            "gold": "[ said_to_be_the_same_as ] of @wd . entity ( ) filter id == \" Q2695156 \" ^^wd:entity ;"
+        }
+    ]
+}

@@ -1,204 +1,204 @@
 {
     "data": [
         {
-            "Question": "who was the doctoral supervisor of albert einstein ?",
-            "Gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;"
+            "question": "who was the doctoral supervisor of albert einstein ?",
+            "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;"
         },
         {
-            "Question": "did kaurisma\u0308ki ever win the grand prix at cannes ?",
-            "Gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;"
+            "question": "did kaurisma\u0308ki ever win the grand prix at cannes ?",
+            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;"
         },
         {
-            "Question": "who wrote the song hotel california ?",
-            "Gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;"
+            "question": "who wrote the song hotel california ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;"
         },
         {
-            "Question": "who was on the apollo 11 mission ?",
-            "Gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;"
+            "question": "who was on the apollo 11 mission ?",
+            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;"
         },
         {
-            "Question": "which electronics companies were founded in beijing ?",
-            "Gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;"
+            "question": "which electronics companies were founded in beijing ?",
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "what is in a chocolate chip cookie ?",
-            "Gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;"
+            "question": "what is in a chocolate chip cookie ?",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;"
         },
         {
-            "Question": "was the wife of president lincoln called mary ?",
-            "Gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;"
+            "question": "was the wife of president lincoln called mary ?",
+            "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;"
         },
         {
-            "Question": "how many movies did park chan-wook direct ?",
-            "Gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;"
+            "question": "how many movies did park chan-wook direct ?",
+            "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;"
         },
         {
-            "Question": "in which united states state is mount mckinley located ?",
-            "Gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;"
+            "question": "in which united states state is mount mckinley located ?",
+            "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;"
         },
         {
-            "Question": "which indian company has the most employees ?",
-            "Gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;"
+            "question": "which indian company has the most employees ?",
+            "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;"
         },
         {
-            "Question": "in which school did obama ' s wife study ?",
-            "Gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;"
+            "question": "in which school did obama ' s wife study ?",
+            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;"
         },
         {
-            "Question": "where does piccadilly start ?",
-            "Gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;"
+            "question": "where does piccadilly start ?",
+            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;"
         },
         {
-            "Question": "what is the capital of cameroon ?",
-            "Gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;"
+            "question": "what is the capital of cameroon ?",
+            "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;"
         },
         {
-            "Question": "when did the boston tea party take place ?",
-            "Gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;"
+            "question": "when did the boston tea party take place ?",
+            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;"
         },
         {
-            "Question": "who played gus fring in breaking bad ?",
-            "Gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;"
+            "question": "who played gus fring in breaking bad ?",
+            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;"
         },
         {
-            "Question": "who wrote harry potter ?",
-            "Gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;"
+            "question": "who wrote harry potter ?",
+            "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;"
         },
         {
-            "Question": "which actors play in big bang theory ?",
-            "Gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;"
+            "question": "which actors play in big bang theory ?",
+            "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;"
         },
         {
-            "Question": "what is the largest country in the world ?",
-            "Gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;"
+            "question": "what is the largest country in the world ?",
+            "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;"
         },
         {
-            "Question": "which states border illinois ?",
-            "Gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;"
+            "question": "which states border illinois ?",
+            "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;"
         },
         {
-            "Question": "how many goals did pele\u0301 score ?",
-            "Gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;"
+            "question": "how many goals did pele\u0301 score ?",
+            "gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "who is the president of eritrea ?",
-            "Gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;"
+            "question": "who is the president of eritrea ?",
+            "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;"
         },
         {
-            "Question": "which computer scientist won an oscar ?",
-            "Gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;"
+            "question": "which computer scientist won an oscar ?",
+            "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "who created family guy ?",
-            "Gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;"
+            "question": "who created family guy ?",
+            "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;"
         },
         {
-            "Question": "how many people live in poland ?",
-            "Gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;"
+            "question": "how many people live in poland ?",
+            "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;"
         },
         {
-            "Question": "to which party does the mayor of paris belong ?",
-            "Gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;"
+            "question": "to which party does the mayor of paris belong ?",
+            "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;"
         },
         {
-            "Question": "who does the voice of bart simpson ?",
-            "Gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;"
+            "question": "who does the voice of bart simpson ?",
+            "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;"
         },
         {
-            "Question": "who composed the soundtrack for cameron ' s titanic ?",
-            "Gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;"
+            "question": "who composed the soundtrack for cameron ' s titanic ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;"
         },
         {
-            "Question": "when did boris becker end his active career ?",
-            "Gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;"
+            "question": "when did boris becker end his active career ?",
+            "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;"
         },
         {
-            "Question": "show me all basketball players that are higher than 2 meters .",
-            "Gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;"
+            "question": "show me all basketball players that are higher than 2 meters .",
+            "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;"
         },
         {
-            "Question": "what country is sitecore from ?",
-            "Gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;"
+            "question": "what country is sitecore from ?",
+            "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;"
         },
         {
-            "Question": "which country was bill gates born in ?",
-            "Gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;"
+            "question": "which country was bill gates born in ?",
+            "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;"
         },
         {
-            "Question": "who developed slack ?",
-            "Gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;"
+            "question": "who developed slack ?",
+            "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "in which city did nikos kazantzakis die ?",
-            "Gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;"
+            "question": "in which city did nikos kazantzakis die ?",
+            "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;"
         },
         {
-            "Question": "how many grand-children did jacques cousteau have ?",
-            "Gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;"
+            "question": "how many grand-children did jacques cousteau have ?",
+            "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;"
         },
         {
-            "Question": "which films did stanley kubrick direct ?",
-            "Gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;"
+            "question": "which films did stanley kubrick direct ?",
+            "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "does neymar play for real madrid ?",
-            "Gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;"
+            "question": "does neymar play for real madrid ?",
+            "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;"
         },
         {
-            "Question": "how many seats does the home stadium of fc porto have ?",
-            "Gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;"
+            "question": "how many seats does the home stadium of fc porto have ?",
+            "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;"
         },
         {
-            "Question": "show me all books in asimov ' s foundation series .",
-            "Gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;"
+            "question": "show me all books in asimov ' s foundation series .",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;"
         },
         {
-            "Question": "which movies star both liz taylor and richard burton ?",
-            "Gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;"
+            "question": "which movies star both liz taylor and richard burton ?",
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "in which city are the headquarters of the united nations ?",
-            "Gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;"
+            "question": "in which city are the headquarters of the united nations ?",
+            "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;"
         },
         {
-            "Question": "in which city was the president of montenegro born ?",
-            "Gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;"
+            "question": "in which city was the president of montenegro born ?",
+            "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;"
         },
         {
-            "Question": "which writers studied in istanbul ?",
-            "Gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;"
+            "question": "which writers studied in istanbul ?",
+            "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;"
         },
         {
-            "Question": "who is the mayor of paris ?",
-            "Gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;"
+            "question": "who is the mayor of paris ?",
+            "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;"
         },
         {
-            "Question": "what is the full name of prince charles ?",
-            "Gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;"
+            "question": "what is the full name of prince charles ?",
+            "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;"
         },
         {
-            "Question": "what is the longest river in china ?",
-            "Gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;"
+            "question": "what is the longest river in china ?",
+            "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;"
         },
         {
-            "Question": "who discovered ceres ?",
-            "Gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;"
+            "question": "who discovered ceres ?",
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;"
         },
         {
-            "Question": "when did princess diana die ?",
-            "Gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;"
+            "question": "when did princess diana die ?",
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;"
         },
         {
-            "Question": "which presidents were born in 1945 ?",
-            "Gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;"
+            "question": "which presidents were born in 1945 ?",
+            "gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;"
         },
         {
-            "Question": "give me all federal chancellors of germany .",
-            "Gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;"
+            "question": "give me all federal chancellors of germany .",
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;"
         },
-      {
-        "Question": "how many moons does mars have ?",
-        "Gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;"
-      }
+        {
+            "question": "how many moons does mars have ?",
+            "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;"
+        }
     ]
 }
