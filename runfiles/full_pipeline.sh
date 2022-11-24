@@ -12,9 +12,14 @@
 #     ]
 # }
 # Output: Text file of list of questions
-python src/scripts/gen_thingtalk_paraphrase.py \
-    --input "src/data/output/thingtalk_answer.json" \
-    --output_file "src/data/input/thingtalk_paraphrases.txt"
+python src/scripts/gen_gpt_input.py \
+    --input "src/data/training_files/fewshot.json" \
+    --output_file "src/data/input/thingtalk_paraphrases.json" \
+    --use_thingtalk
+
+python src/scripts/gen_gpt_input.py \
+    --input "src/data/training_files/fewshot.json" \
+    --output_file "src/data/input/paraphrases.json"
 
 # Run GPT-3 with thingtalk paraphrase inputs
 # Input: Text file of list of questions
@@ -29,8 +34,8 @@ python src/scripts/gen_thingtalk_paraphrase.py \
 # }
 python src/generator.py \
     --prompt_template_file "src/data/prompts/thingtalk_paraphrase.prompt" \
-    --input_file "src/data/input/thingtalk_paraphrases.txt" \
-    --output_file "src/data/output/gpt3_thingtalk_paraphrases.json" \
+    --input_file "src/data/input/thingtalk_paraphrases.json" \
+    --output_file "src/data/input/gpt3_thingtalk_paraphrases.json" \
     --engine text-curie-001 \
     --num_gen 3
 
@@ -58,5 +63,4 @@ python src/generator.py \
 
 # Output question query accuracy
 python src/scripts/eval.py \
-    --groundtruth_file "data/training_files/fewshot.json" \
-    --prediction_file "data/output/thingtalk_answer.json" 
+    --input_file "src/data/output/thingtalk_answer.json"

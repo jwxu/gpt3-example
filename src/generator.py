@@ -1,6 +1,7 @@
 import argparse
 from tqdm import tqdm
 import json
+import time
 
 from utils.neural_worker import NeuralWorker
 
@@ -44,18 +45,29 @@ def gen_question(args):
     Use GPT-3 to generate alternative questions
     """
     # Read file of input questions
-    file = open(args.input_file)
-    all_questions = file.readlines()
+    with open(args.input_file) as json_file:
+        file = json.load(json_file)['data']
+
+    all_questions = []
+    gold = []
+    for data in file:
+        all_questions.append(data['question'])
+        gold.append(data['gold'])
+
+    # file = open(args.input_file)
+    # all_questions = file.readlines()
 
     neural_worker = NeuralWorker(prompt_template_file=args.prompt_template_file, engine=args.engine)
 
     question_gen = {}
     question_gen['data'] = []
     prev_reply = ""
+    idx = 0
     for question in tqdm(all_questions):
-        for _ in range(args.num_gen):
+        for i in range(args.num_gen):
             question_para = {}
             question_para["question"] = question
+            question_para["gold"] = gold[idx]
 
             filled_prompt = neural_worker.fill_prompt_template(history=question)
             reply = neural_worker.generate(input_text=filled_prompt, args=args, postprocess=True, max_tries=1)
@@ -69,8 +81,13 @@ def gen_question(args):
                 question_gen['data'].append(question_para)
                 prev_reply = reply
 
-    with open(args.output_file, 'w', encoding='utf-8') as f:
-        json.dump(question_gen, f, ensure_ascii=False, indent=4)
+        with open(args.output_file, 'w', encoding='utf-8') as f:
+            json.dump(question_gen, f, ensure_ascii=False, indent=4)
+
+        time.sleep(2)
+        prev_reply = ""
+        idx += 1
+
 
 
 if __name__ == "__main__":

@@ -25,14 +25,14 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    const fileStream = JSON.parse(fs.readFileSync("../data/training_files/fewshot.json", { encoding: 'utf8' })).data;
+    const fileStream = JSON.parse(fs.readFileSync("../data/input/gpt3_thingtalk_paraphrases.json", { encoding: 'utf8' })).data;
 
     var returnObj = {
         data: []
     }
 
     for await (const data of fileStream) {
-        const line = data["Question"]
+        const line = data["paraphrase"]
         console.log(`Question: ${line}`);
 
         let thingtalk_output = null;
@@ -107,8 +107,9 @@ async function main() {
         console.log('\n');
 
         returnObj.data.push({
-            question: line,
-            gold: data["Gold"],
+            question: data["question"],
+            paraphrase: line,
+            gold: data["gold"],
             thingtalk: thingtalk_output,
             sparql: sparql_output,
             answer: final_answer

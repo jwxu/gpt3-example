@@ -1,8 +1,0 @@
-{
-    "data": [
-        {
-            "question": "who is the head of government of paris ?\n",
-            "paraphrase": "test paraphrase"
-        }
-    ]
-}
