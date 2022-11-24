@@ -25,18 +25,22 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    const fileStream = fs.createReadStream("../data/input/simple_questions.txt");
+//    const fileStream = fs.createReadStream("../data/input/simple_questions.txt");
 
-    const rl = readline.createInterface({
-        input: fileStream,
-        crlfDelay: Infinity
-    });
+    const fileStream = JSON.parse(fs.readFileSync("../data/training_files/fewshot.json", { encoding: 'utf8' })).data;
+//
+//    const rl = readline.createInterface({
+//        input: fileStream,
+//        crlfDelay: Infinity
+//    });
 
     var returnObj = {
         data: []
     }
 
-    for await (const line of rl) {
+//    for await (const line of rl) {
+    fileStream.forEach(async data => {
+        const line = data["Question"]
         console.log(`Question: ${line}`);
 
         let thingtalk_output = null;
@@ -55,8 +59,8 @@ async function main() {
 
         if (!thingtalk_output) {
             console.log('Failed to parse the question. \n');
-            thingtalk_output = "Failed to parse the question."
-            rl.prompt();
+            thingtalk_output = "Failed to parse the question.";
+//            rl.prompt();
         } else {
             console.log('ThingTalk:', thingtalk_output);
             try {
@@ -66,16 +70,16 @@ async function main() {
                     const answers = await wikidata.query(sparql_output);
                     console.log('Answers:');
                     if (answers.length === 0) {
-                        final_answer = 'None'
-                        console.log('None')
+                        final_answer = 'None';
+                        console.log('None');
                     } else {
                         for (const answer of answers.slice(0, 5)) {
                             if (answer.startsWith('Q')) {
                                 const label = await wikidata.getLabel(answer);
-                                final_answer = label + " (" + answer + ")"
-                                console.log(`${label} (${answer})`)
+                                final_answer = label + " (" + answer + ")";
+                                console.log(`${label} (${answer})`);
                             } else {
-                                final_answer = answer
+                                final_answer = answer;
                                 console.log(answer);
                             }
 
@@ -104,11 +108,11 @@ async function main() {
             sparql: sparql_output,
             answer: final_answer
         });
-
-    }
+//    }
+    });
     console.log(returnObj);
 
-    var json = JSON.stringify(returnObj);
+    var json = JSON.stringify(returnObj, null, 4);
         fs.writeFile('../data/output/thingtalk_answer.json', json, 'utf8', function (err) {
             if (err) {return console.error(err);};
         });

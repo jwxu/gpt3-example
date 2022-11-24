@@ -1,1 +1,22 @@
-{"data":[{"question":"who is the head of government of paris ?","thingtalk":"[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;","sparql":"SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q90> <http://www.wikidata.org/prop/direct/P6> ?x. }","answer":"Anne Hidalgo (Q2851133)"},{"question":"who is obama's wife ?","thingtalk":"[ spouse ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;","sparql":"SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q76> <http://www.wikidata.org/prop/direct/P26> ?x. }","answer":"Michelle Obama (Q13133)"},{"question":"who is the mayor of paris ?","thingtalk":"[ head_of_government ] of @wd . entity ( ) filter id == \" Q154810 \" ^^wd:entity ;","sparql":"SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q154810> <http://www.wikidata.org/prop/direct/P6> ?x. }","answer":"None"}]}
+{
+    "data": [
+        {
+            "question": "who is the head of government of paris ?",
+            "thingtalk": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q90> <http://www.wikidata.org/prop/direct/P6> ?x. }",
+            "answer": "Anne Hidalgo (Q2851133)"
+        },
+        {
+            "question": "who is obama's wife ?",
+            "thingtalk": "[ spouse ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q76> <http://www.wikidata.org/prop/direct/P26> ?x. }",
+            "answer": "Michelle Obama (Q13133)"
+        },
+        {
+            "question": "who is the mayor of paris ?",
+            "thingtalk": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q154810 \" ^^wd:entity ;",
+            "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q154810> <http://www.wikidata.org/prop/direct/P6> ?x. }",
+            "answer": "None"
+        }
+    ]
+}
