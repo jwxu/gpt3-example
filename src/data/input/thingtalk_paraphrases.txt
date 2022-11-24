@@ -1,0 +1,3 @@
+Paraphrase "who is the head of government of paris ?" using the words "head of government"
+Paraphrase "who is obama's wife ?" using the words "spouse"
+Paraphrase "who is the mayor of paris ?" using the words "head of government"

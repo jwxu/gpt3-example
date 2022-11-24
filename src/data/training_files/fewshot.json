@@ -196,9 +196,9 @@
             "Question": "give me all federal chancellors of germany .",
             "Gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;"
         },
-        {
-            "Question": "how many moons does mars have ?",
-            "Gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;"
-        }
+      {
+        "Question": "how many moons does mars have ?",
+        "Gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;"
+      }
     ]
 }
