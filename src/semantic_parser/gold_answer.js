@@ -25,29 +25,19 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    const fileStream = JSON.parse(fs.readFileSync("../data/input/gpt3_paraphrases.json", { encoding: 'utf8' })).data;
+    const fileStream = JSON.parse(fs.readFileSync("../data/training_files/test.json", { encoding: 'utf8' })).data;
 
     var returnObj = {
         data: []
     }
 
     for await (const data of fileStream) {
-        const line = data["paraphrase"]
+        const line = data["question"]
         console.log(`Question: ${line}`);
 
-        let thingtalk_output = null;
-        let sparql_output = null;
+        let thingtalk_output = data["gold"];
+        let sparql_output = '';
         let final_answer = '';
-        try {
-            const nlu_result = await Tp.Helpers.Http.post(NLU_SERVER, JSON.stringify({ q: line }), {
-                dataContentType: 'application/json'
-            });
-            const parsed = JSON.parse(nlu_result);
-            if (parsed && parsed.candidates && parsed.candidates.length > 0)
-                thingtalk_output = parsed.candidates[0].code.join(' ');
-        } catch (e) {
-            console.log(`Catch nlu_result: ${e.message}`);
-        }
 
         if (!thingtalk_output) {
             console.log('Failed to parse the question. \n');
@@ -108,17 +98,13 @@ async function main() {
 
         returnObj.data.push({
             question: data["question"],
-            paraphrase: line,
             gold: data["gold"],
-            thingtalk: thingtalk_output,
-            sparql: sparql_output,
-            gold_answer: data["gold_answer"],
-            answer: final_answer
+            gold_answer: final_answer,
         });
     }
 
     var json = JSON.stringify(returnObj, null, 4);
-        fs.writeFile('../data/output/paraphrase_answer.json', json, 'utf8', function (err) {
+        fs.writeFile('../data/training_files/test.json', json, 'utf8', function (err) {
             if (err) {return console.error(err);};
         });
 }

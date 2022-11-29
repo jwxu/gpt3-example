@@ -1,2 +1,18 @@
-Paraphrase the question using different wording.
-{history}
+Write a question that paaraphrases the following sentence:
+
+Q: who was the doctoral supervisor of albert einstein ?
+who was albert einstein's phd advisor ?
+
+Q: did kaurismäki ever win the grand prix at cannes ?
+did kaurismäki win the cannes grand prix ?
+
+Q: who wrote the song hotel california ?
+who was the composer of hotel california ?
+
+Q: who was on the apollo 11 mission ?
+who were the crew members of apollo 11 ?
+
+Q: which electronics companies were founded in beijing ?
+what electronics companies were established in beijing ?
+
+Q: {history}

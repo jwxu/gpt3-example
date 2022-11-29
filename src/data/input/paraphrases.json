@@ -2,203 +2,253 @@
     "data": [
         {
             "question": "who was the doctoral supervisor of albert einstein ?",
-            "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;"
+            "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
+            "gold_answer": "Heinrich Burkhardt (Q97154)\nHeinrich Friedrich Weber (Q116635)\nAlfred Kleiner (Q4175282)\n"
         },
         {
             "question": "did kaurisma\u0308ki ever win the grand prix at cannes ?",
-            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;"
+            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "who wrote the song hotel california ?",
-            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;"
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
+            "gold_answer": "Don Felder (Q704399)"
         },
         {
             "question": "who was on the apollo 11 mission ?",
-            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;"
+            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
+            "gold_answer": "Michael Collins (Q104859)\nNeil Armstrong (Q1615)\nBuzz Aldrin (Q2252)\n"
         },
         {
             "question": "which electronics companies were founded in beijing ?",
-            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
+            "gold_answer": "Xiaomi (Q1636958)"
         },
         {
             "question": "what is in a chocolate chip cookie ?",
-            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;"
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
+            "gold_answer": "chocolate chip (Q1329680)\nflour (Q36465)\n"
         },
         {
             "question": "was the wife of president lincoln called mary ?",
-            "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;"
+            "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "how many movies did park chan-wook direct ?",
-            "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;"
+            "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
+            "gold_answer": ""
         },
         {
             "question": "in which united states state is mount mckinley located ?",
-            "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;"
+            "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
+            "gold_answer": "Denali Borough (Q179950)\nAlaska (Q797)\nUnited States of America (Q30)\n"
         },
         {
             "question": "which indian company has the most employees ?",
-            "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;"
+            "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;",
+            "gold_answer": "Indian Railways (Q819425)"
         },
         {
             "question": "in which school did obama ' s wife study ?",
-            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;"
+            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
+            "gold_answer": "Livingston High School (Q6659650)\nWhitney M. Young Magnet High School (Q7996715)\nWoodlawn High School (Q8033019)\nMarymount University (Q14712798)\nPrinceton University (Q21578)\nand 1 more ..."
         },
         {
             "question": "where does piccadilly start ?",
-            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;"
+            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
+            "gold_answer": "Piccadilly Circus (Q215255)\nHyde Park Corner (Q2166146)\n"
         },
         {
             "question": "what is the capital of cameroon ?",
-            "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;"
+            "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;",
+            "gold_answer": "Yaound\u00e9 (Q3808)"
         },
         {
             "question": "when did the boston tea party take place ?",
-            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;"
+            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "who played gus fring in breaking bad ?",
-            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;"
+            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
+            "gold_answer": ""
         },
         {
             "question": "who wrote harry potter ?",
-            "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;"
+            "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;",
+            "gold_answer": "J. K. Rowling (Q34660)"
         },
         {
             "question": "which actors play in big bang theory ?",
-            "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;"
+            "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;",
+            "gold_answer": "Charlie Sheen (Q103939)\nGeorge Takei (Q110154)\nRiki Lindhome (Q120406)\nStan Lee (Q181900)\nJim Parsons (Q190972)\nand 53 more ..."
         },
         {
             "question": "what is the largest country in the world ?",
-            "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;"
+            "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;",
+            "gold_answer": "Union State (Q166110)"
         },
         {
             "question": "which states border illinois ?",
-            "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;"
+            "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;",
+            "gold_answer": "Michigan (Q1166)\nIndiana (Q1415)\nWisconsin (Q1537)\nIowa (Q1546)\nMissouri (Q1581)\nand 1 more ..."
         },
         {
             "question": "how many goals did pele\u0301 score ?",
-            "gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;"
+            "gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;",
+            "gold_answer": ""
         },
         {
             "question": "who is the president of eritrea ?",
-            "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;"
+            "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;",
+            "gold_answer": "Isaias Afwerki (Q57348)"
         },
         {
             "question": "which computer scientist won an oscar ?",
-            "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;",
+            "gold_answer": "Paul Debevec (Q93006)\nEdwin Catmull (Q93161)\nDemetri Terzopoulos (Q3022082)\nHenrik Wann Jensen (Q5716583)\nKen Perlin (Q6388302)\nand 2 more ..."
         },
         {
             "question": "who created family guy ?",
-            "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;"
+            "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;",
+            "gold_answer": "Seth MacFarlane (Q188492)"
         },
         {
             "question": "how many people live in poland ?",
-            "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;"
+            "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "to which party does the mayor of paris belong ?",
-            "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;"
+            "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Socialist Party (Q170972)"
         },
         {
             "question": "who does the voice of bart simpson ?",
-            "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;"
+            "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;",
+            "gold_answer": "None"
         },
         {
             "question": "who composed the soundtrack for cameron ' s titanic ?",
-            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;"
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;",
+            "gold_answer": "James Horner (Q106221)"
         },
         {
             "question": "when did boris becker end his active career ?",
-            "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;"
+            "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "show me all basketball players that are higher than 2 meters .",
-            "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;"
+            "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;",
+            "gold_answer": ""
         },
         {
             "question": "what country is sitecore from ?",
-            "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;"
+            "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;",
+            "gold_answer": "Denmark (Q35)"
         },
         {
             "question": "which country was bill gates born in ?",
-            "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;"
+            "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;",
+            "gold_answer": "United States of America (Q30)"
         },
         {
             "question": "who developed slack ?",
-            "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;",
+            "gold_answer": "Slack Technologies (Q7808625)"
         },
         {
             "question": "in which city did nikos kazantzakis die ?",
-            "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;"
+            "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;",
+            "gold_answer": "Freiburg im Breisgau (Q2833)"
         },
         {
             "question": "how many grand-children did jacques cousteau have ?",
-            "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;"
+            "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;",
+            "gold_answer": ""
         },
         {
             "question": "which films did stanley kubrick direct ?",
-            "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;",
+            "gold_answer": "2001: A Space Odyssey (Q103474)\nDr. Strangelove (Q105702)\nSpartacus (Q108297)\nA Clockwork Orange (Q181086)\nThe Shining (Q186341)\nand 12 more ..."
         },
         {
             "question": "does neymar play for real madrid ?",
-            "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;"
+            "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "how many seats does the home stadium of fc porto have ?",
-            "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;"
+            "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "show me all books in asimov ' s foundation series .",
-            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;"
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;",
+            "gold_answer": "Foundation (Q753894)\nPrelude to Foundation (Q783533)\nFoundation and Empire (Q839800)\nSecond Foundation (Q853927)\nFoundation\u2019s Edge (Q932592)\nand 2 more ..."
         },
         {
             "question": "which movies star both liz taylor and richard burton ?",
-            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;",
+            "gold_answer": "Who's Afraid of Virginia Woolf? (Q325643)\nThe Sandpiper (Q426314)\nThe Comedians (Q568696)\nHammersmith Is Out (Q634049)\nBoom! (Q668569)\nand 7 more ..."
         },
         {
             "question": "in which city are the headquarters of the united nations ?",
-            "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;"
+            "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;",
+            "gold_answer": "New York City (Q60)"
         },
         {
             "question": "in which city was the president of montenegro born ?",
-            "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;"
+            "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;",
+            "gold_answer": "Nik\u0161i\u0107 (Q200733)"
         },
         {
             "question": "which writers studied in istanbul ?",
-            "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;",
+            "gold_answer": "Beh\u00e7et Necatigil (Q198849)\n\u0130smet Giritli (Q344228)\nAhmet Yal\u00e7\u0131nkaya (Q401956)\nAli Bayramo\u011flu (Q462705)\nDemir \u00d6zl\u00fc (Q668833)\nand 307 more ..."
         },
         {
             "question": "who is the mayor of paris ?",
-            "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;"
+            "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Anne Hidalgo (Q2851133)"
         },
         {
             "question": "what is the full name of prince charles ?",
-            "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;"
+            "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "what is the longest river in china ?",
-            "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;"
+            "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;",
+            "gold_answer": "Yangtze (Q5413)"
         },
         {
             "question": "who discovered ceres ?",
-            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;"
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;",
+            "gold_answer": "Giuseppe Piazzi (Q14280)"
         },
         {
             "question": "when did princess diana die ?",
-            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;"
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "which presidents were born in 1945 ?",
-            "gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;"
+            "gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;",
+            "gold_answer": ""
         },
         {
             "question": "give me all federal chancellors of germany .",
-            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;",
+            "gold_answer": "Angela Merkel (Q567)\nKonrad Adenauer (Q2492)\nLudwig Erhard (Q2496)\nWilly Brandt (Q2514)\nKurt Georg Kiesinger (Q2512)\nand 5 more ..."
         },
         {
             "question": "how many moons does mars have ?",
-            "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;"
+            "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;",
+            "gold_answer": "Mars Reconnaissance Orbiter (Q183160)\nMariner 9 (Q203801)\nMars Express (Q205672)\nMars Global Surveyor (Q206300)\n2001 Mars Odyssey (Q207164)\nand 11 more ..."
         }
     ]
 }

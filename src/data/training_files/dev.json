@@ -2,203 +2,253 @@
     "data": [
         {
             "question": "what was the first queen album ?",
-            "gold": "sort ( publication_date asc of @wd . entity ( ) filter contains ( performer , \" Q15862 \" ^^wd:entity ) && instance_of == \" Q482994 \" ^^wd:domain ) [ 1 ] ;"
+            "gold": "sort ( publication_date asc of @wd . entity ( ) filter contains ( performer , \" Q15862 \" ^^wd:entity ) && instance_of == \" Q482994 \" ^^wd:domain ) [ 1 ] ;",
+            "gold_answer": "Pre Ordained (Q84034437)"
         },
         {
             "question": "did elvis presley have children ?",
-            "gold": "[ count ( child ) >= 1 ] of @wd . entity ( ) filter id == \" Q303 \" ^^wd:entity ;"
+            "gold": "[ count ( child ) >= 1 ] of @wd . entity ( ) filter id == \" Q303 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "give me a list of all canadians that reside in the united states",
-            "gold": "@wd . entity ( ) filter contains ( < place_of_birth / country > , \" Q16 \" ^^wd:entity ) && contains ( residence , \" Q30 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( < place_of_birth / country > , \" Q16 \" ^^wd:entity ) && contains ( residence , \" Q30 \" ^^wd:entity ) ;",
+            "gold_answer": "Walter Zinn (Q712154)\nAlbert W. Tucker (Q777234)\nWilliam D’Arcy (Q1419834)\nPierre-Gabriel Huot (Q3383077)\nD. A. Carson (Q5203466)\nand 7 more ..."
         },
         {
             "question": "where is syngman rhee buried ?",
-            "gold": "[ place_of_burial ] of @wd . entity ( ) filter id == \" Q171684 \" ^^wd:entity ;"
+            "gold": "[ place_of_burial ] of @wd . entity ( ) filter id == \" Q171684 \" ^^wd:entity ;",
+            "gold_answer": "Seoul National Cemetery (Q488897)"
         },
         {
             "question": "in which countries do people speak japanese ?",
-            "gold": "@wd . country ( ) filter contains ( official_language , \" Q5287 \" ^^wd:entity ) ;"
+            "gold": "@wd . country ( ) filter contains ( official_language , \" Q5287 \" ^^wd:entity ) ;",
+            "gold_answer": "Palau (Q695)\nJapan (Q17)\n"
         },
         {
             "question": "who is the king of the netherlands ?",
-            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q2045066 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q2045066 \" ^^wd:entity ) ;",
+            "gold_answer": "Willem III of the Netherlands (Q125649)\nWilhelmina of the Netherlands (Q150747)\nWillem II of the Netherlands (Q154287)\nJuliana of the Netherlands (Q154946)\nWillem-Alexander of the Netherlands (Q154952)\nand 2 more ..."
         },
         {
             "question": "who produced the most films ?",
-            "gold": "[ producer ] of sort ( count desc of count ( @wd . film ( ) ) by producer ) [ 1 ] ;"
+            "gold": "[ producer ] of sort ( count desc of count ( @wd . film ( ) ) by producer ) [ 1 ] ;",
+            "gold_answer": ""
         },
         {
             "question": "show me all czech movies .",
-            "gold": "@wd . film ( ) filter contains ( country_of_origin , \" Q213 \" ^^wd:entity ) || contains ( country_of_origin , \" Q33946 \" ^^wd:entity ) ;"
+            "gold": "@wd . film ( ) filter contains ( country_of_origin , \" Q213 \" ^^wd:entity ) || contains ( country_of_origin , \" Q33946 \" ^^wd:entity ) ;",
+            "gold_answer": "null (Q25402305)\nTristan & Isolde (Q310729)\nStalingrad (Q316225)\nAlien vs. Predator (Q155163)\nUnderground (Q156516)\nand 6575 more ..."
         },
         {
             "question": "which rivers flow into the north sea ?",
-            "gold": "@wd . river ( ) filter contains ( mouth_of_the_watercourse , \" Q1693 \" ^^wd:entity ) ;"
+            "gold": "@wd . river ( ) filter contains ( mouth_of_the_watercourse , \" Q1693 \" ^^wd:entity ) ;",
+            "gold_answer": "Rhine (Q584)\nElbe (Q1644)\nWeser (Q1650)\nEider (Q3314)\nRiver Thames (Q19686)\nand 60 more ..."
         },
         {
             "question": "when did operation overlord commence ?",
-            "gold": "[ start_time ] of @wd . entity ( ) filter id == \" Q8641370 \" ^^wd:entity ;"
+            "gold": "[ start_time ] of @wd . entity ( ) filter id == \" Q8641370 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "where do the red sox play ?",
-            "gold": "[ home_venue ] of @wd . entity ( ) filter id == \" Q213959 \" ^^wd:entity ;"
+            "gold": "[ home_venue ] of @wd . entity ( ) filter id == \" Q213959 \" ^^wd:entity ;",
+            "gold_answer": "Fenway Park (Q49136)"
         },
         {
             "question": "in which time zone is rome ?",
-            "gold": "[ located_in_time_zone ] of @wd . entity ( ) filter id == \" Q220 \" ^^wd:entity ;"
+            "gold": "[ located_in_time_zone ] of @wd . entity ( ) filter id == \" Q220 \" ^^wd:entity ;",
+            "gold_answer": "UTC+01:00 (Q6655)\nUTC+02:00 (Q6723)\n"
         },
         {
             "question": "give me a list of all critically endangered birds .",
-            "gold": "@wd . entity ( ) filter contains ( < parent_taxon * > , \" Q5113 \" ^^wd:entity ) && contains ( iucn_conservation_status , \" Q219127 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( < parent_taxon * > , \" Q5113 \" ^^wd:entity ) && contains ( iucn_conservation_status , \" Q219127 \" ^^wd:entity ) ;",
+            "gold_answer": "Pternistis ochropectus (Q27074577)\nTrinidad Piping Guan (Q212526)\nChilean Woodstar (Q657365)\nMacrocephalon maleo (Q836291)\nCrested Argus (Q845065)\nand 229 more ..."
         },
         {
             "question": "how much did the lego movie cost ?",
-            "gold": "[ cost ] of @wd . entity ( ) filter id == \" Q2608065 \" ^^wd:entity ;"
+            "gold": "[ cost ] of @wd . entity ( ) filter id == \" Q2608065 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "what was the original occupation of the inventor of lego ?",
-            "gold": "[ < discoverer_or_inventor / occupation > ] of @wd . entity ( ) filter id == \" Q170484 \" ^^wd:entity ;"
+            "gold": "[ < discoverer_or_inventor / occupation > ] of @wd . entity ( ) filter id == \" Q170484 \" ^^wd:entity ;",
+            "gold_answer": "entrepreneur (Q131524)\ncarpenter (Q154549)\norganizational founder (Q4479442)\ndesigner (Q5322166)\n"
         },
         {
             "question": "which countries have more than ten volcanoes ?",
-            "gold": "count ( @wd . entity ( ) filter instance_of == \" Q8072 \" ^^wd:domain ) by country filter count >= 10 ;"
+            "gold": "count ( @wd . entity ( ) filter instance_of == \" Q8072 \" ^^wd:domain ) by country filter count >= 10 ;",
+            "gold_answer": ""
         },
         {
             "question": "show me all united states states .",
-            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q35657 \" ^^wd:domain ;"
+            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q35657 \" ^^wd:domain ;",
+            "gold_answer": "Maine (Q724)\nNew Hampshire (Q759)\nMassachusetts (Q771)\nConnecticut (Q779)\nHawaii (Q782)\nand 45 more ..."
         },
         {
             "question": "who wrote the game of thrones theme ?",
-            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q23572 \" ^^wd:entity ;"
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q23572 \" ^^wd:entity ;",
+            "gold_answer": "Ramin Djawadi (Q57577)"
         },
         {
             "question": "give me all films produced by hal roach .",
-            "gold": "@wd . film ( ) filter contains ( producer , \" Q72792 \" ^^wd:entity ) ;"
+            "gold": "@wd . film ( ) filter contains ( producer , \" Q72792 \" ^^wd:entity ) ;",
+            "gold_answer": "Way Out West (Q232227)\nZenobia (Q189687)\nHer Dangerous Path (Q5732193)\nThe Live Ghost (Q339796)\nOne Million B.C. (Q375321)\nand 583 more ..."
         },
         {
             "question": "in which films did julia roberts as well as richard gere play ?",
-            "gold": "@wd . film ( ) filter contains ( cast_member , \" Q48410 \" ^^wd:entity ) && contains ( cast_member , \" Q40523 \" ^^wd:entity ) ;"
+            "gold": "@wd . film ( ) filter contains ( cast_member , \" Q48410 \" ^^wd:entity ) && contains ( cast_member , \" Q40523 \" ^^wd:entity ) ;",
+            "gold_answer": "Pretty Woman (Q207954)\nRunaway Bride (Q1160813)\n"
         },
         {
             "question": "when was olof palme shot ?",
-            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q53713 \" ^^wd:entity ;"
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q53713 \" ^^wd:entity ;",
+            "gold_answer": ""
         },
         {
             "question": "how many emperors did china have ?",
-            "gold": "count ( @wd . entity ( ) filter contains ( position_held , \" Q268218 \" ^^wd:entity ) ) ;"
+            "gold": "count ( @wd . entity ( ) filter contains ( position_held , \" Q268218 \" ^^wd:entity ) ) ;",
+            "gold_answer": ""
         },
         {
             "question": "show me the book that muhammad ali wrote .",
-            "gold": "@wd . book ( ) filter contains ( author , \" Q36107 \" ^^wd:entity ) ;"
+            "gold": "@wd . book ( ) filter contains ( author , \" Q36107 \" ^^wd:entity ) ;",
+            "gold_answer": "The Soul of a Butterfly (Q7765371)\nThe Greatest: My Own Story (Q24963339)\n"
         },
         {
             "question": "which country has the most official languages ?",
-            "gold": "sort ( count ( official_language ) desc of @wd . country ( ) ) [ 1 ] ;"
+            "gold": "sort ( count ( official_language ) desc of @wd . country ( ) ) [ 1 ] ;",
+            "gold_answer": ""
         },
         {
             "question": "how did michael jackson die ?",
-            "gold": "[ cause_of_death ] of @wd . entity ( ) filter id == \" Q2831 \" ^^wd:entity ;"
+            "gold": "[ cause_of_death ] of @wd . entity ( ) filter id == \" Q2831 \" ^^wd:entity ;",
+            "gold_answer": "myocardial infarction (Q12152)"
         },
         {
             "question": "which space probes were sent into orbit around the sun ?",
-            "gold": "@wd . entity ( ) filter contains ( type_of_orbit , \" Q737809 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( type_of_orbit , \" Q737809 \" ^^wd:entity ) ;",
+            "gold_answer": "Venera 1 (Q152500)\nVenera 7 (Q152800)\nUlysses (Q156081)\nSpitzer Space Telescope (Q201953)\nSIM Lite Astrometric Observatory (Q224960)\nand 16 more ..."
         },
         {
             "question": "who produced films starring natalie portman ?",
-            "gold": "[ producer ] of @wd . film ( ) filter contains ( cast_member , \" Q37876 \" ^^wd:entity ) ;"
+            "gold": "[ producer ] of @wd . film ( ) filter contains ( cast_member , \" Q37876 \" ^^wd:entity ) ;",
+            "gold_answer": "Joaquin Phoenix (Q185140)\nDarren Aronofsky (Q192762)\nRyan Kavanaugh (Q202945)\nWes Anderson (Q223687)\nCarmen Finestra (Q239895)\nand 62 more ..."
         },
         {
             "question": "what is the biggest stadium in spain ?",
-            "gold": "sort ( maximum_capacity desc of @wd . stadium ( ) filter contains ( country , \" Q29 \" ^^wd:entity ) ) [ 1 ] ;"
+            "gold": "sort ( maximum_capacity desc of @wd . stadium ( ) filter contains ( country , \" Q29 \" ^^wd:entity ) ) [ 1 ] ;",
+            "gold_answer": "Camp Nou (Q159848)"
         },
         {
             "question": "on which day is columbus day ?",
-            "gold": "[ day_in_year_for_periodic_occurrence ] of @wd . entity ( ) filter id == \" Q367523 \" ^^wd:entity ;"
+            "gold": "[ day_in_year_for_periodic_occurrence ] of @wd . entity ( ) filter id == \" Q367523 \" ^^wd:entity ;",
+            "gold_answer": "second Monday in October (Q14827175)"
         },
         {
             "question": "how short is the shortest active nba player ?",
-            "gold": "[ height ] of sort ( height asc of @wd . entity ( ) filter contains ( < member_of_sports_team / league > , \" Q155223 \" ^^wd:entity ) && contains ( occupation , \" Q3665646 \" ^^wd:entity ) ) [ 1 ] ;"
+            "gold": "[ height ] of sort ( height asc of @wd . entity ( ) filter contains ( < member_of_sports_team / league > , \" Q155223 \" ^^wd:entity ) && contains ( occupation , \" Q3665646 \" ^^wd:entity ) ) [ 1 ] ;",
+            "gold_answer": ""
         },
         {
             "question": "whom did lance bass marry ?",
-            "gold": "[ spouse ] of @wd . entity ( ) filter id == \" Q443120 \" ^^wd:entity ;"
+            "gold": "[ spouse ] of @wd . entity ( ) filter id == \" Q443120 \" ^^wd:entity ;",
+            "gold_answer": "Michael Turchin (Q19668300)"
         },
         {
             "question": "what form of government does russia have ?",
-            "gold": "[ basic_form_of_government ] of @wd . entity ( ) filter id == \" Q159 \" ^^wd:entity ;"
+            "gold": "[ basic_form_of_government ] of @wd . entity ( ) filter id == \" Q159 \" ^^wd:entity ;",
+            "gold_answer": "representative democracy (Q188759)\nfederal republic (Q512187)\nsemi-presidential system (Q49890)\n"
         },
         {
             "question": "what movies does jesse eisenberg play in ?",
-            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q219512 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q219512 \" ^^wd:entity ) ;",
+            "gold_answer": "The Social Network (Q185888)\nZombieland (Q219810)\n30 Minutes or Less (Q224133)\nThe Emperor's Club (Q261899)\nAdventureland (Q379994)\nand 36 more ..."
         },
         {
             "question": "give me all soccer clubs in the premier league .",
-            "gold": "@wd . entity ( ) filter contains ( league , \" Q9448 \" ^^wd:entity ) && instance_of == \" Q476028 \" ^^wd:domain ;"
+            "gold": "@wd . entity ( ) filter contains ( league , \" Q9448 \" ^^wd:entity ) && instance_of == \" Q476028 \" ^^wd:domain ;",
+            "gold_answer": "Manchester United F.C. (Q18656)\nAston Villa F.C. (Q18711)\nFulham F.C. (Q18708)\nNewcastle United F.C. (Q18716)\nSouthampton F.C. (Q18732)\nand 15 more ..."
         },
         {
             "question": "show me all museums in london .",
-            "gold": "@wd . museum ( ) filter contains ( location , \" Q84 \" ^^wd:entity ) ;"
+            "gold": "@wd . museum ( ) filter contains ( location , \" Q84 \" ^^wd:entity ) ;",
+            "gold_answer": "Institute of Contemporary Arts (Q1665153)\nBarbican Centre (Q653858)\nSouth London Gallery (Q3492259)\nAmora London (Q4064609)\nVestry House Museum (Q7923505)\nand 8 more ..."
         },
         {
             "question": "give me all south american countries .",
-            "gold": "@wd . country ( ) filter contains ( continent , \" Q18 \" ^^wd:entity ) ;"
+            "gold": "@wd . country ( ) filter contains ( continent , \" Q18 \" ^^wd:entity ) ;",
+            "gold_answer": "Chile (Q298)\nArgentina (Q414)\nPeru (Q419)\nVenezuela (Q717)\nGuyana (Q734)\nand 14 more ..."
         },
         {
             "question": "which pope succeeded john paul ii ?",
-            "gold": "[ replaced_by of ( position_held filter value == \" Q19546 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q989 \" ^^wd:entity ;"
+            "gold": "[ replaced_by of ( position_held filter value == \" Q19546 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q989 \" ^^wd:entity ;",
+            "gold_answer": "Benedict XVI (Q2494)"
         },
         {
             "question": "who is the son of sonny and cher ?",
-            "gold": "@wd . entity ( ) filter contains ( father , \" Q179150 \" ^^wd:entity ) && contains ( mother , \" Q12003 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( father , \" Q179150 \" ^^wd:entity ) && contains ( mother , \" Q12003 \" ^^wd:entity ) ;",
+            "gold_answer": "Chaz Bono (Q979387)"
         },
         {
             "question": "what are the five boroughs of new york ?",
-            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q408804 \" ^^wd:domain ;"
+            "gold": "@wd . administrative_territorial_entity ( ) filter instance_of == \" Q408804 \" ^^wd:domain ;",
+            "gold_answer": "Manhattan (Q11299)\nBrooklyn (Q18419)\nThe Bronx (Q18426)\nQueens (Q18424)\nStaten Island (Q18432)\n"
         },
         {
             "question": "show me hemingway ' s autobiography .",
-            "gold": "@wd . entity ( ) filter contains ( author , \" Q23434 \" ^^wd:entity ) && contains ( genre , \" Q4184 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( author , \" Q23434 \" ^^wd:entity ) && contains ( genre , \" Q4184 \" ^^wd:entity ) ;",
+            "gold_answer": "A Moveable Feast (Q2052363)"
         },
         {
             "question": "what kind of music did lou reed play ?",
-            "gold": "[ genre ] of @wd . entity ( ) filter id == \" Q189080 \" ^^wd:entity ;"
+            "gold": "[ genre ] of @wd . entity ( ) filter id == \" Q189080 \" ^^wd:entity ;",
+            "gold_answer": "glam rock (Q76092)\nnoise rock (Q181861)\nfolk rock (Q186472)\npsychedelic rock (Q206159)\nart rock (Q217467)\nand 7 more ..."
         },
         {
             "question": "in which city does sylvester stallone live ?",
-            "gold": "[ residence : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q40026 \" ^^wd:entity ;"
+            "gold": "[ residence : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q40026 \" ^^wd:entity ;",
+            "gold_answer": "Beverly Hills (Q127856)"
         },
         {
             "question": "who was vincent van gogh inspired by ?",
-            "gold": "[ influenced_by ] of @wd . entity ( ) filter id == \" Q5582 \" ^^wd:entity ;"
+            "gold": "[ influenced_by ] of @wd . entity ( ) filter id == \" Q5582 \" ^^wd:entity ;",
+            "gold_answer": "Jean-François Millet (Q148458)\nAnton Mauve (Q591907)\nWillem Roelofs (Q1372280)\nPeter Paul Rubens (Q5599)\nPaul Cézanne (Q35548)\nand 1 more ..."
         },
         {
             "question": "what are the names of the teenage mutant ninja turtles ?",
-            "gold": "@wd . entity ( ) filter contains ( part_of , \" Q1381762 \" ^^wd:entity ) ;"
+            "gold": "@wd . entity ( ) filter contains ( part_of , \" Q1381762 \" ^^wd:entity ) ;",
+            "gold_answer": "Michelangelo (Q323920)\nDonatello (Q323925)\nLeonardo (Q323934)\nRaphael (Q2078291)\n"
         },
         {
             "question": "what are the zodiac signs ?",
-            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q40540 \" ^^wd:entity ;"
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q40540 \" ^^wd:entity ;",
+            "gold_answer": "Gemini (Q129214)\nVirgo (Q134061)\nLibra (Q134394)\nScorpio (Q134398)\nLeo (Q159816)\nand 7 more ..."
         },
         {
             "question": "what languages do they speak in pakistan ?",
-            "gold": "[ official_language ] of @wd . entity ( ) filter id == \" Q843 \" ^^wd:entity ;"
+            "gold": "[ official_language ] of @wd . entity ( ) filter id == \" Q843 \" ^^wd:entity ;",
+            "gold_answer": "Urdu (Q1617)"
         },
         {
             "question": "who became president after jfk died ?",
-            "gold": "[ replaced_by of ( position_held filter value == \" Q11696 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q9696 \" ^^wd:entity ;"
+            "gold": "[ replaced_by of ( position_held filter value == \" Q11696 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q9696 \" ^^wd:entity ;",
+            "gold_answer": "Lyndon B. Johnson (Q9640)"
         },
         {
             "question": "in what city is the heineken brewery ?",
-            "gold": "[ < manufacturer / headquarters_location > ] of @wd . entity ( ) filter id == \" Q854383 \" ^^wd:entity ;"
+            "gold": "[ < manufacturer / headquarters_location > ] of @wd . entity ( ) filter id == \" Q854383 \" ^^wd:entity ;",
+            "gold_answer": "Amsterdam (Q727)"
         },
         {
             "question": "what is elon musk famous for ?",
-            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q317521 \" ^^wd:entity ;"
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q317521 \" ^^wd:entity ;",
+            "gold_answer": "None"
         },
         {
             "question": "what is batman ' s real name ?",
-            "gold": "[ said_to_be_the_same_as ] of @wd . entity ( ) filter id == \" Q2695156 \" ^^wd:entity ;"
+            "gold": "[ said_to_be_the_same_as ] of @wd . entity ( ) filter id == \" Q2695156 \" ^^wd:entity ;",
+            "gold_answer": "Bruce Wayne (Q3645503)"
         }
     ]
 }

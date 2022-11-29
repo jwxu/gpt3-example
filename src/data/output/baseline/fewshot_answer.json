@@ -6,6 +6,7 @@
             "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
             "thingtalk": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q937> <http://www.wikidata.org/prop/direct/P184> ?x. }",
+            "gold_answer": "Heinrich Burkhardt (Q97154)\nHeinrich Friedrich Weber (Q116635)\nAlfred Kleiner (Q4175282)\n",
             "answer": "Heinrich Burkhardt (Q97154)\nHeinrich Friedrich Weber (Q116635)\nAlfred Kleiner (Q4175282)\n"
         },
         {
@@ -14,6 +15,7 @@
             "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
             "thingtalk": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
             "sparql": "ASK WHERE { <http://www.wikidata.org/entity/Q276186> <http://www.wikidata.org/prop/direct/P166> <http://www.wikidata.org/entity/Q844804>. }",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -22,6 +24,7 @@
             "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
             "thingtalk": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q780394> <http://www.wikidata.org/prop/direct/P86> ?x. }",
+            "gold_answer": "Don Felder (Q704399)",
             "answer": "Don Felder (Q704399)"
         },
         {
@@ -30,6 +33,7 @@
             "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
             "thingtalk": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q43653> <http://www.wikidata.org/prop/direct/P1029> ?x. }",
+            "gold_answer": "Michael Collins (Q104859)\nNeil Armstrong (Q1615)\nBuzz Aldrin (Q2252)\n",
             "answer": "Michael Collins (Q104859)\nNeil Armstrong (Q1615)\nBuzz Aldrin (Q2252)\n"
         },
         {
@@ -38,6 +42,7 @@
             "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "Xiaomi (Q1636958)",
             "answer": ""
         },
         {
@@ -46,6 +51,7 @@
             "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "chocolate chip (Q1329680)\nflour (Q36465)\n",
             "answer": ""
         },
         {
@@ -54,6 +60,7 @@
             "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
             "thingtalk": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
             "sparql": "ASK WHERE { <http://www.wikidata.org/entity/Q91> <http://www.wikidata.org/prop/direct/P26> ?x. ?x <http://www.w3.org/2000/01/rdf-schema#label> \"mary\"@en. }",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -62,6 +69,7 @@
             "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
             "thingtalk": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
             "sparql": "SELECT (COUNT(DISTINCT ?x) as ?count) WHERE { ?x <http://www.wikidata.org/prop/direct/P57> <http://www.wikidata.org/entity/Q315484>. }",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -70,6 +78,7 @@
             "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
             "thingtalk": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q130018> <http://www.wikidata.org/prop/direct/P131>+ ?x. }",
+            "gold_answer": "Denali Borough (Q179950)\nAlaska (Q797)\nUnited States of America (Q30)\n",
             "answer": "Denali Borough (Q179950)\nAlaska (Q797)\nUnited States of America (Q30)\n"
         },
         {
@@ -78,6 +87,7 @@
             "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;",
             "thingtalk": "sort ( employees desc of @wd . entity ( ) filter id == \" Q1510558 \" ^^wd:entity ) [ 1 ] ;",
             "sparql": "SELECT DISTINCT null WHERE { <http://www.wikidata.org/entity/Q1510558> <http://www.wikidata.org/prop/direct/P1128> ?x. } ORDER BY DESC(?x) LIMIT 1",
+            "gold_answer": "Indian Railways (Q819425)",
             "answer": "None"
         },
         {
@@ -86,6 +96,7 @@
             "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
             "thingtalk": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q37654 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q37654> <http://www.wikidata.org/prop/direct/P26>/<http://www.wikidata.org/prop/direct/P69> ?x. }",
+            "gold_answer": "Livingston High School (Q6659650)\nWhitney M. Young Magnet High School (Q7996715)\nWoodlawn High School (Q8033019)\nMarymount University (Q14712798)\nPrinceton University (Q21578)\nand 1 more ...",
             "answer": "None"
         },
         {
@@ -94,6 +105,7 @@
             "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
             "thingtalk": "[ terminus ] of @wd . entity ( ) filter id == \" Q104810552 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q104810552> <http://www.wikidata.org/prop/direct/P559> ?x. }",
+            "gold_answer": "Piccadilly Circus (Q215255)\nHyde Park Corner (Q2166146)\n",
             "answer": "None"
         },
         {
@@ -102,6 +114,7 @@
             "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;",
             "thingtalk": "[ capital ] of @wd . entity ( ) filter id == \" Q3808 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q3808> <http://www.wikidata.org/prop/direct/P36> ?x. }",
+            "gold_answer": "Yaoundé (Q3808)",
             "answer": "None"
         },
         {
@@ -110,6 +123,7 @@
             "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
             "thingtalk": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q19024> <http://www.wikidata.org/prop/direct/P585> ?x. }",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -118,6 +132,7 @@
             "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
             "thingtalk": "[ cast_member ] of @wd . entity ( ) filter id == \" Q5620660 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q5620660> <http://www.wikidata.org/prop/direct/P161> ?x. }",
+            "gold_answer": "",
             "answer": "None"
         },
         {
@@ -126,6 +141,7 @@
             "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;",
             "thingtalk": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q8337> <http://www.wikidata.org/prop/direct/P50> ?x. }",
+            "gold_answer": "J. K. Rowling (Q34660)",
             "answer": "J. K. Rowling (Q34660)"
         },
         {
@@ -134,6 +150,7 @@
             "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;",
             "thingtalk": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q8539> <http://www.wikidata.org/prop/direct/P161> ?x. }",
+            "gold_answer": "Charlie Sheen (Q103939)\nGeorge Takei (Q110154)\nRiki Lindhome (Q120406)\nStan Lee (Q181900)\nJim Parsons (Q190972)\nand 53 more ...",
             "answer": "Charlie Sheen (Q103939)\nGeorge Takei (Q110154)\nRiki Lindhome (Q120406)\nStan Lee (Q181900)\nJim Parsons (Q190972)\nand 53 more ..."
         },
         {
@@ -142,6 +159,7 @@
             "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;",
             "thingtalk": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;",
             "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q6256>. ?x <http://www.wikidata.org/prop/direct/P2046> ?y. } ORDER BY DESC(?y) LIMIT 1",
+            "gold_answer": "Union State (Q166110)",
             "answer": "Union State (Q166110)"
         },
         {
@@ -150,6 +168,7 @@
             "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;",
             "thingtalk": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q1204> <http://www.wikidata.org/prop/direct/P47> ?x. }",
+            "gold_answer": "Michigan (Q1166)\nIndiana (Q1415)\nWisconsin (Q1537)\nIowa (Q1546)\nMissouri (Q1581)\nand 1 more ...",
             "answer": "Michigan (Q1166)\nIndiana (Q1415)\nWisconsin (Q1537)\nIowa (Q1546)\nMissouri (Q1581)\nand 1 more ..."
         },
         {
@@ -158,6 +177,7 @@
             "gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -166,6 +186,7 @@
             "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;",
             "thingtalk": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q81706 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q81706> <http://www.wikidata.org/prop/direct/P35> ?x. }",
+            "gold_answer": "Isaias Afwerki (Q57348)",
             "answer": "None"
         },
         {
@@ -174,6 +195,7 @@
             "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "Paul Debevec (Q93006)\nEdwin Catmull (Q93161)\nDemetri Terzopoulos (Q3022082)\nHenrik Wann Jensen (Q5716583)\nKen Perlin (Q6388302)\nand 2 more ...",
             "answer": ""
         },
         {
@@ -182,6 +204,7 @@
             "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;",
             "thingtalk": "[ creator ] of @wd . entity ( ) filter id == \" Q55012102 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q55012102> <http://www.wikidata.org/prop/direct/P170> ?x. }",
+            "gold_answer": "Seth MacFarlane (Q188492)",
             "answer": "None"
         },
         {
@@ -190,6 +213,7 @@
             "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -198,6 +222,7 @@
             "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
             "thingtalk": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q1583726 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q1583726> <http://www.wikidata.org/prop/direct/P6>/<http://www.wikidata.org/prop/direct/P102> ?x. }",
+            "gold_answer": "Socialist Party (Q170972)",
             "answer": "None"
         },
         {
@@ -206,6 +231,7 @@
             "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;",
             "thingtalk": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q5480> <http://www.wikidata.org/prop/direct/P725> ?x. }",
+            "gold_answer": "None",
             "answer": "None"
         },
         {
@@ -214,6 +240,7 @@
             "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;",
             "thingtalk": "[ composer ] of @wd . entity ( ) filter id == \" Q42574 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q42574> <http://www.wikidata.org/prop/direct/P86> ?x. }",
+            "gold_answer": "James Horner (Q106221)",
             "answer": "None"
         },
         {
@@ -222,6 +249,7 @@
             "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;",
             "thingtalk": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q6100293 \" ^^wd:entity ;",
             "sparql": "Failed to convert thingtalk into SPARQL",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -230,6 +258,7 @@
             "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -238,6 +267,7 @@
             "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;",
             "thingtalk": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q2663195> <http://www.wikidata.org/prop/direct/P17> ?x. }",
+            "gold_answer": "Denmark (Q35)",
             "answer": "Denmark (Q35)"
         },
         {
@@ -246,6 +276,7 @@
             "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;",
             "thingtalk": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q5284> <http://www.wikidata.org/prop/direct/P19>/<http://www.wikidata.org/prop/direct/P17> ?x. }",
+            "gold_answer": "United States of America (Q30)",
             "answer": "United States of America (Q30)"
         },
         {
@@ -254,6 +285,7 @@
             "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;",
             "thingtalk": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;",
             "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P1056> <http://www.wikidata.org/entity/Q17130715>. }",
+            "gold_answer": "Slack Technologies (Q7808625)",
             "answer": "Slack Technologies (Q7808625)"
         },
         {
@@ -262,6 +294,7 @@
             "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;",
             "thingtalk": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q214622> <http://www.wikidata.org/prop/direct/P20> ?x. }",
+            "gold_answer": "Freiburg im Breisgau (Q2833)",
             "answer": "Freiburg im Breisgau (Q2833)"
         },
         {
@@ -270,6 +303,7 @@
             "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;",
             "thingtalk": "count ( @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ;",
             "sparql": "SELECT (COUNT(DISTINCT ?http://www.wikidata.org/entity/Q83233>) as ?count) WHERE {  }",
+            "gold_answer": "",
             "answer": "None"
         },
         {
@@ -278,6 +312,7 @@
             "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;",
             "thingtalk": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;",
             "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P57> <http://www.wikidata.org/entity/Q2001>. }",
+            "gold_answer": "2001: A Space Odyssey (Q103474)\nDr. Strangelove (Q105702)\nSpartacus (Q108297)\nA Clockwork Orange (Q181086)\nThe Shining (Q186341)\nand 12 more ...",
             "answer": "2001: A Space Odyssey (Q103474)\nDr. Strangelove (Q105702)\nSpartacus (Q108297)\nA Clockwork Orange (Q181086)\nThe Shining (Q186341)\nand 12 more ..."
         },
         {
@@ -286,6 +321,7 @@
             "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;",
             "thingtalk": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;",
             "sparql": "ASK WHERE { <http://www.wikidata.org/entity/Q142794> <http://www.wikidata.org/prop/direct/P54> <http://www.wikidata.org/entity/Q8682>. }",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -294,6 +330,7 @@
             "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;",
             "thingtalk": "sum ( maximum_capacity of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ) ;",
             "sparql": "SELECT (SUM(?x) as ?sum) WHERE { <http://www.wikidata.org/entity/Q128446> <http://www.wikidata.org/prop/direct/P1083> ?x. }",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -302,6 +339,7 @@
             "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;",
             "thingtalk": "@wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT null WHERE {  }",
+            "gold_answer": "Foundation (Q753894)\nPrelude to Foundation (Q783533)\nFoundation and Empire (Q839800)\nSecond Foundation (Q853927)\nFoundation’s Edge (Q932592)\nand 2 more ...",
             "answer": "None"
         },
         {
@@ -310,6 +348,7 @@
             "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;",
             "thingtalk": "@wd . film ( ) filter contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;",
             "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q11424>. ?x <http://www.wikidata.org/prop/direct/P161> <http://www.wikidata.org/entity/Q151973>. }",
+            "gold_answer": "Who's Afraid of Virginia Woolf? (Q325643)\nThe Sandpiper (Q426314)\nThe Comedians (Q568696)\nHammersmith Is Out (Q634049)\nBoom! (Q668569)\nand 7 more ...",
             "answer": "What's New Pussycat? (Q195402)\nNineteen Eighty-Four (Q208424)\nZulu (Q228867)\nWho's Afraid of Virginia Woolf? (Q325643)\nAbsolution (Q332658)\nand 58 more ..."
         },
         {
@@ -318,6 +357,7 @@
             "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "New York City (Q60)",
             "answer": ""
         },
         {
@@ -326,6 +366,7 @@
             "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;",
             "thingtalk": "[ < place_of_birth / place_of_creation > ] of @wd . entity ( ) filter id == \" Q1149153 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q1149153> <http://www.wikidata.org/prop/direct/P19>/<http://www.wikidata.org/prop/direct/undefined> ?x. }",
+            "gold_answer": "Nikšić (Q200733)",
             "answer": "None"
         },
         {
@@ -334,6 +375,7 @@
             "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "Behçet Necatigil (Q198849)\nİsmet Giritli (Q344228)\nAhmet Yalçınkaya (Q401956)\nAli Bayramoğlu (Q462705)\nDemir Özlü (Q668833)\nand 307 more ...",
             "answer": ""
         },
         {
@@ -342,6 +384,7 @@
             "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
             "thingtalk": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q154810 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q154810> <http://www.wikidata.org/prop/direct/P6> ?x. }",
+            "gold_answer": "Anne Hidalgo (Q2851133)",
             "answer": "None"
         },
         {
@@ -350,6 +393,7 @@
             "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;",
             "thingtalk": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;",
             "sparql": "Failed to convert thingtalk into SPARQL",
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -358,6 +402,7 @@
             "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;",
             "thingtalk": "sort ( length desc of @wd . river ( ) ) [ 1 ] ;",
             "sparql": "SELECT DISTINCT ?x WHERE { ?x <http://www.wikidata.org/prop/direct/P31>/<http://www.wikidata.org/prop/direct/P279>* <http://www.wikidata.org/entity/Q4022>. ?x <http://www.wikidata.org/prop/direct/P2043> ?y. } ORDER BY DESC(?y) LIMIT 1",
+            "gold_answer": "Yangtze (Q5413)",
             "answer": "null (Q17600104)"
         },
         {
@@ -366,6 +411,7 @@
             "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;",
             "thingtalk": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q596> <http://www.wikidata.org/prop/direct/P61> ?x. }",
+            "gold_answer": "Giuseppe Piazzi (Q14280)",
             "answer": "Giuseppe Piazzi (Q14280)"
         },
         {
@@ -374,6 +420,7 @@
             "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -382,6 +429,7 @@
             "gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;",
             "thingtalk": "Failed to parse the question.",
             "sparql": null,
+            "gold_answer": "",
             "answer": ""
         },
         {
@@ -390,6 +438,7 @@
             "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;",
             "thingtalk": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q56022 \" ^^wd:entity ;",
             "sparql": "SELECT DISTINCT ?x WHERE { <http://www.wikidata.org/entity/Q56022> <http://www.wikidata.org/prop/direct/P6> ?x. }",
+            "gold_answer": "Angela Merkel (Q567)\nKonrad Adenauer (Q2492)\nLudwig Erhard (Q2496)\nWilly Brandt (Q2514)\nKurt Georg Kiesinger (Q2512)\nand 5 more ...",
             "answer": "None"
         },
         {
@@ -398,6 +447,7 @@
             "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;",
             "thingtalk": "sum ( mass of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ) ;",
             "sparql": "SELECT (SUM(?x) as ?sum) WHERE { <http://www.wikidata.org/entity/Q111> <http://www.wikidata.org/prop/direct/P2067> ?x. }",
+            "gold_answer": "Mars Reconnaissance Orbiter (Q183160)\nMariner 9 (Q203801)\nMars Express (Q205672)\nMars Global Surveyor (Q206300)\n2001 Mars Odyssey (Q207164)\nand 11 more ...",
             "answer": ""
         }
     ]

@@ -41,8 +41,9 @@ def generate_paraphrase(questions_file, output_file):
 
         for data in questions:
             prompt = {}
-            prompt["question"] = data['Question']
-            prompt["gold"] = data['Gold']
+            prompt["question"] = data['question']
+            prompt["gold"] = data['gold']
+            prompt["gold_answer"] = data["gold_answer"]
             paraphrase_prompts["data"].append(prompt)
 
     save_json(paraphrase_prompts, output_file)
@@ -55,8 +56,8 @@ def generate_thingtalk_paraphrase(questions_file, output_file):
         paraphrase_prompts["data"] = []
 
         for data in questions:
-            question = data['Question']
-            gold = data['Gold']
+            question = data['question']
+            gold = data['gold']
             props = parse_thingtalk(gold)
             prop_words = ""
             for prop in props[:-1]:
@@ -67,6 +68,7 @@ def generate_thingtalk_paraphrase(questions_file, output_file):
             prompt["question"] = question
             prompt["gold"] = gold
             prompt["properties"] = prop_words
+            prompt["gold_answer"] = data["gold_answer"]
             paraphrase_prompts["data"].append(prompt)
 
     save_json(paraphrase_prompts, output_file)
