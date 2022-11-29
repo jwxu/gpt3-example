@@ -52,7 +52,7 @@ def gen_question(args):
     gold = []
     for data in file:
         all_questions.append(data['question'])
-        gold.append(data['gold'])
+        gold.append((data['gold'], data['gold_answer']))
 
     # file = open(args.input_file)
     # all_questions = file.readlines()
@@ -67,7 +67,8 @@ def gen_question(args):
         for i in range(args.num_gen):
             question_para = {}
             question_para["question"] = question
-            question_para["gold"] = gold[idx]
+            question_para["gold"] = gold[idx][0]
+            question_para["gold_answer"] = gold[idx][1]
 
             filled_prompt = neural_worker.fill_prompt_template(history=question)
             reply = neural_worker.generate(input_text=filled_prompt, args=args, postprocess=True, max_tries=1)
@@ -80,14 +81,14 @@ def gen_question(args):
                 question_para['paraphrase'] = reply
                 question_gen['data'].append(question_para)
                 prev_reply = reply
+        
+            time.sleep(1.5)
 
         with open(args.output_file, 'w', encoding='utf-8') as f:
             json.dump(question_gen, f, ensure_ascii=False, indent=4)
 
-        time.sleep(2)
         prev_reply = ""
         idx += 1
-
 
 
 if __name__ == "__main__":
