@@ -1,5 +1,6 @@
 import argparse
 import json
+import re
 
 def get_arg_parse():
     """
@@ -16,12 +17,54 @@ def get_arg_parse():
 
 
 def parse_thingtalk(thingtalk, start="[ ", end=" ]"):
+    words = "sort ("
+    if words in thingtalk:
+        start_idx = thingtalk.find(words) + len(words) - 1
+        thingtalk = thingtalk[start_idx:]
+        properties = thingtalk.strip().split()[1]
+
+    words = "contains ("
+    if words in thingtalk:
+        start_idx = thingtalk.find(words) + len(words) - 1
+        end_idx = thingtalk.find(',') + 1
+        properties = thingtalk[start_idx:end_idx].strip().split("/")
+        properties = [" ".join(prop.split("_")) for prop in properties]
+    
+        thingtalk = ""
+        for prop in properties[:-1]:
+            thingtalk += prop + ", "
+        thingtalk += properties[-1]
+
+    words = "contains~ ("
+    if words in thingtalk:
+        start_idx = thingtalk.find(words) + len(words) - 1
+        end_idx = thingtalk.find(',') + 1
+        properties = thingtalk[start_idx:end_idx].strip().split("/")
+        properties = [" ".join(prop.split("_")) for prop in properties]
+    
+        thingtalk = ""
+        for prop in properties[:-1]:
+            thingtalk += prop + ", "
+        thingtalk += properties[-1]
+    
+    words = "count ("
+    if words in thingtalk:
+        start_idx = thingtalk.find(words) + len(words) - 1
+        thingtalk = thingtalk[start_idx:]
+        properties = thingtalk.strip().split()[1]
+    
     start_idx = thingtalk.find(start) + len(start)
     end_idx = thingtalk.find(end)
     properties = thingtalk[start_idx:end_idx].strip().split("/")
     properties = [" ".join(prop.split("_")) for prop in properties]
 
-    return properties
+    prop_words = ""
+    for prop in properties[:-1]:
+        prop_words += prop + ", "
+    prop_words += properties[-1]
+    prop_words = prop_words.strip("< ").strip(" >")
+
+    return prop_words
 
 
 def save_json(dictionary, file):
@@ -58,11 +101,7 @@ def generate_thingtalk_paraphrase(questions_file, output_file):
         for data in questions:
             question = data['question']
             gold = data['gold']
-            props = parse_thingtalk(gold)
-            prop_words = ""
-            for prop in props[:-1]:
-                prop_words += prop + ", "
-            prop_words += props[-1]
+            prop_words = parse_thingtalk(gold)
 
             prompt = {}
             prompt["question"] = question
