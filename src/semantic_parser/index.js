@@ -5,6 +5,7 @@ import * as QALD from 'qald';
 import Tp from 'thingpedia';
 import ThingTalk from 'thingtalk';
 import * as readline from 'readline';
+import { time } from 'console';
 
 const NLU_SERVER = 'http://127.0.0.1:8400/en-US/query';
 
@@ -64,26 +65,26 @@ async function main() {
                         final_answer = 'None';
                         console.log('None');
                     } else {
-                        if (answers.length === 1) {
-                            const answer = answers[0];
+                        // if (answers.length === 1) {
+                        //     const answer = answers[0];
+                        //     if (answer.startsWith('Q')) {
+                        //         const label = await wikidata.getLabel(answer);
+                        //         final_answer += label + " (" + answer + ")";
+                        //         console.log(`${label} (${answer})`);
+                        //     }
+                        // } else {
+                        for (const answer of answers.slice(0, 5)) {
                             if (answer.startsWith('Q')) {
                                 const label = await wikidata.getLabel(answer);
-                                final_answer += label + " (" + answer + ")";
+                                final_answer += label + " (" + answer + ")" + '\n';
                                 console.log(`${label} (${answer})`);
+                            } else {
+                                final_answer = answer;
+                                console.log(answer);
                             }
-                        } else {
-                            for (const answer of answers.slice(0, 5)) {
-                                if (answer.startsWith('Q')) {
-                                    const label = await wikidata.getLabel(answer);
-                                    final_answer += label + " (" + answer + ")" + '\n';
-                                    console.log(`${label} (${answer})`);
-                                } else {
-                                    final_answer = answer;
-                                    console.log(answer);
-                                }
 
-                            }
                         }
+                        // }
 
                         if (answers.length > 5) {
                             let rem_length = answers.length - 5;

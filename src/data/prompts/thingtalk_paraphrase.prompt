@@ -1,2 +1,23 @@
-Generate paraphrase of a question according to the prompt.
-{history}
+Paraphrase the following question using the specified words:
+Q: who wrote the song hotel california ?
+W: composer
+who was the composer of hotel california ?
+
+Q: who was on the apollo 11 mission ?
+W: crew members
+who were the crew members of the Apollo 11 mission ?
+
+Q: what is in a chocolate chip cookie ?
+W: has parts
+a chocolate chip cookie has what parts?
+
+Q: in which united states state is mount mckinley located ?
+W: located in the administrative territorial entity
+in which administrative territorial entity is mount McKinley located?
+
+Q: when did the boston tea party take place ?
+W: point in time
+at what point in time did the boston tea party take place?
+
+Q: {history}
+W: {properties}
