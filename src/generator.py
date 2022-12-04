@@ -22,7 +22,8 @@ def get_arg_parse():
                                  'text-curie-001',
                                  'davinci',
                                  'text-davinci-001',
-                                 'text-davinci-002'],
+                                 'text-davinci-002',
+                                 'text-davinci-003'],
                         help='The GPT-3 engine to use.')  # choices are from the smallest to the largest model
 
     parser.add_argument('--num_gen', type=int, default=1, required=False, help='Number of turns to continue each dialog for (default: 1')
