@@ -1,0 +1,862 @@
+{
+    "data": [
+        {
+            "question": "who was the doctoral supervisor of albert einstein ?",
+            "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
+            "gold_answer": "Heinrich Burkhardt (Q97154)\nHeinrich Friedrich Weber (Q116635)\nAlfred Kleiner (Q4175282)\n",
+            "paraphrase": "who is albert einstein ? who was einstein's doctoral supervisor ?"
+        },
+        {
+            "question": "who was the doctoral supervisor of albert einstein ?",
+            "gold": "[ doctoral_advisor ] of @wd . entity ( ) filter id == \" Q937 \" ^^wd:entity ;",
+            "gold_answer": "Heinrich Burkhardt (Q97154)\nHeinrich Friedrich Weber (Q116635)\nAlfred Kleiner (Q4175282)\n",
+            "paraphrase": "what was albert einstein's doctoral field of study? who supervised albert einstein's doctoral studies?"
+        },
+        {
+            "question": "did kaurismäki ever win the grand prix at cannes ?",
+            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the grand prix at cannes ? has aki kaurismäki ever won it?"
+        },
+        {
+            "question": "did kaurismäki ever win the grand prix at cannes ?",
+            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who is kaurismäki ? has kaurismäki ever won the grand prix at cannes?"
+        },
+        {
+            "question": "did kaurismäki ever win the grand prix at cannes ?",
+            "gold": "[ contains ( award_received , \" Q844804 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q276186 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who is kaurismäki ? did Aki Kaurismäki win the grand prix at Cannes Film Festival?"
+        },
+        {
+            "question": "who wrote the song hotel california ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
+            "gold_answer": "Don Felder (Q704399)",
+            "paraphrase": "what is the name of the song ? who wrote hotel california ?"
+        },
+        {
+            "question": "who wrote the song hotel california ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
+            "gold_answer": "Don Felder (Q704399)",
+            "paraphrase": "what is the name of the song? who wrote the song hotel california?"
+        },
+        {
+            "question": "who wrote the song hotel california ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q780394 \" ^^wd:entity ;",
+            "gold_answer": "Don Felder (Q704399)",
+            "paraphrase": "who is the lead singer of the eagles ? who wrote the lyrics for the song hotel california?"
+        },
+        {
+            "question": "who was on the apollo 11 mission ?",
+            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
+            "gold_answer": "Michael Collins (Q104859)\nNeil Armstrong (Q1615)\nBuzz Aldrin (Q2252)\n",
+            "paraphrase": "what was the apollo 11 mission ? who were the astronauts on the apollo 11 mission ?"
+        },
+        {
+            "question": "who was on the apollo 11 mission ?",
+            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
+            "gold_answer": "Michael Collins (Q104859)\nNeil Armstrong (Q1615)\nBuzz Aldrin (Q2252)\n",
+            "paraphrase": "what was the apollo 11 mission? who were the astronauts on the apollo 11 mission?"
+        },
+        {
+            "question": "who was on the apollo 11 mission ?",
+            "gold": "[ crew_members ] of @wd . entity ( ) filter id == \" Q43653 \" ^^wd:entity ;",
+            "gold_answer": "Michael Collins (Q104859)\nNeil Armstrong (Q1615)\nBuzz Aldrin (Q2252)\n",
+            "paraphrase": "what year was the apollo 11 mission ? who were the astronauts of the apollo 11 mission?"
+        },
+        {
+            "question": "which electronics companies were founded in beijing ?",
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
+            "gold_answer": "Xiaomi (Q1636958)",
+            "paraphrase": "which companies were founded in beijing ? what type of companies were founded in beijing ?"
+        },
+        {
+            "question": "which electronics companies were founded in beijing ?",
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
+            "gold_answer": "Xiaomi (Q1636958)",
+            "paraphrase": "where is beijing located? what electronics companies are based in beijing?"
+        },
+        {
+            "question": "which electronics companies were founded in beijing ?",
+            "gold": "@wd . entity ( ) filter contains ( industry , \" Q581105 \" ^^wd:entity ) && contains ( location_of_formation , \" Q956 \" ^^wd:entity ) ;",
+            "gold_answer": "Xiaomi (Q1636958)",
+            "paraphrase": "what electronics companies are located in beijing ? what companies were founded in beijing?"
+        },
+        {
+            "question": "what is in a chocolate chip cookie ?",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
+            "gold_answer": "chocolate chip (Q1329680)\nflour (Q36465)\n",
+            "paraphrase": "what are the ingredients in a chocolate chip cookie ? what type of chips are used in a chocolate chip cookie?"
+        },
+        {
+            "question": "what is in a chocolate chip cookie ?",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
+            "gold_answer": "chocolate chip (Q1329680)\nflour (Q36465)\n",
+            "paraphrase": "what are the ingredients of a chocolate chip cookie ?"
+        },
+        {
+            "question": "what is in a chocolate chip cookie ?",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q14169302 \" ^^wd:entity ;",
+            "gold_answer": "chocolate chip (Q1329680)\nflour (Q36465)\n",
+            "paraphrase": "what are the ingredients in a chocolate chip cookie?"
+        },
+        {
+            "question": "was the wife of president lincoln called mary ?",
+            "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who is the wife of president lincoln ? what is her name?"
+        },
+        {
+            "question": "was the wife of president lincoln called mary ?",
+            "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who was the president of the united states during the civil war ? what was the name of abraham lincoln's wife ?"
+        },
+        {
+            "question": "was the wife of president lincoln called mary ?",
+            "gold": "[ contains~ ( spouse , \" mary \" ) ] of @wd . entity ( ) filter id == \" Q91 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the name of the wife of president lincoln? was mary todd lincoln the wife of abraham lincoln?"
+        },
+        {
+            "question": "how many movies did park chan-wook direct ?",
+            "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
+            "gold_answer": "",
+            "paraphrase": "who is park chan-wook ? how many movies has park chan-wook directed?"
+        },
+        {
+            "question": "how many movies did park chan-wook direct ?",
+            "gold": "count ( @wd . entity ( ) filter contains ( director , \" Q315484 \" ^^wd:entity ) ) ;",
+            "gold_answer": "",
+            "paraphrase": "who is park chan-wook ? how many movies has he directed?"
+        },
+        {
+            "question": "in which united states state is mount mckinley located ?",
+            "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
+            "gold_answer": "Denali Borough (Q179950)\nAlaska (Q797)\nUnited States of America (Q30)\n",
+            "paraphrase": "where is mount mckinley located ? what state is mount mckinley in ?"
+        },
+        {
+            "question": "in which united states state is mount mckinley located ?",
+            "gold": "[ located_in_the_administrative_territorial_entity ] of @wd . entity ( ) filter id == \" Q130018 \" ^^wd:entity ;",
+            "gold_answer": "Denali Borough (Q179950)\nAlaska (Q797)\nUnited States of America (Q30)\n",
+            "paraphrase": "where is mount mckinley located ? in which state is mount mckinley located?"
+        },
+        {
+            "question": "which indian company has the most employees ?",
+            "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;",
+            "gold_answer": "Indian Railways (Q819425)",
+            "paraphrase": "what companies are based in india ? how many employees does tata consultancy services have?"
+        },
+        {
+            "question": "which indian company has the most employees ?",
+            "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;",
+            "gold_answer": "Indian Railways (Q819425)",
+            "paraphrase": "what companies are based in India? which company has the most employees in India?"
+        },
+        {
+            "question": "which indian company has the most employees ?",
+            "gold": "sort ( employees desc of @wd . organization ( ) filter contains ( country , \" Q668 \" ^^wd:entity ) && instance_of == \" Q4830453 \" ^^wd:domain ) [ 1 ] ;",
+            "gold_answer": "Indian Railways (Q819425)",
+            "paraphrase": "what are the major companies in india? how many employees does tata group have?"
+        },
+        {
+            "question": "in which school did obama ' s wife study ?",
+            "gold": "[ < spouse / educated_at > ] of @wd . entity ( ) filter id == \" Q76 \" ^^wd:entity ;",
+            "gold_answer": "Livingston High School (Q6659650)\nWhitney M. Young Magnet High School (Q7996715)\nWoodlawn High School (Q8033019)\nMarymount University (Q14712798)\nPrinceton University (Q21578)\nand 1 more ...",
+            "paraphrase": "who is obama's wife ? what school did michelle obama study at?"
+        },
+        {
+            "question": "where does piccadilly start ?",
+            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
+            "gold_answer": "Piccadilly Circus (Q215255)\nHyde Park Corner (Q2166146)\n",
+            "paraphrase": "what is piccadilly? where does piccadilly line start?"
+        },
+        {
+            "question": "where does piccadilly start ?",
+            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
+            "gold_answer": "Piccadilly Circus (Q215255)\nHyde Park Corner (Q2166146)\n",
+            "paraphrase": "where does the piccadilly line start? what is the first station on the piccadilly line?"
+        },
+        {
+            "question": "where does piccadilly start ?",
+            "gold": "[ terminus ] of @wd . entity ( ) filter id == \" Q1124023 \" ^^wd:entity ;",
+            "gold_answer": "Piccadilly Circus (Q215255)\nHyde Park Corner (Q2166146)\n",
+            "paraphrase": "where does the piccadilly line start ? where does the piccadilly line terminate ?"
+        },
+        {
+            "question": "what is the capital of cameroon ?",
+            "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;",
+            "gold_answer": "Yaoundé (Q3808)",
+            "paraphrase": "what is the name of the capital of cameroon ?"
+        },
+        {
+            "question": "what is the capital of cameroon ?",
+            "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;",
+            "gold_answer": "Yaoundé (Q3808)",
+            "paraphrase": "what is the largest city in cameroon ? what is the name of the capital of cameroon ?"
+        },
+        {
+            "question": "what is the capital of cameroon ?",
+            "gold": "[ capital ] of @wd . entity ( ) filter id == \" Q1009 \" ^^wd:entity ;",
+            "gold_answer": "Yaoundé (Q3808)",
+            "paraphrase": "where is cameroon located ? what is the name of cameroon's capital ?"
+        },
+        {
+            "question": "when did the boston tea party take place ?",
+            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what year did the boston tea party take place ?"
+        },
+        {
+            "question": "when did the boston tea party take place ?",
+            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the boston tea party ? when did the boston tea party occur?"
+        },
+        {
+            "question": "when did the boston tea party take place ?",
+            "gold": "[ point_in_time ] of @wd . entity ( ) filter id == \" Q19024 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what was the boston tea party ? when did the event occur ?"
+        },
+        {
+            "question": "who played gus fring in breaking bad ?",
+            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
+            "gold_answer": "",
+            "paraphrase": "what tv show is breaking bad ? who played the character gus fring in breaking bad?"
+        },
+        {
+            "question": "who played gus fring in breaking bad ?",
+            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
+            "gold_answer": "",
+            "paraphrase": "what tv show is breaking bad ? who played the character gus fring in breaking bad ?"
+        },
+        {
+            "question": "who played gus fring in breaking bad ?",
+            "gold": "[ cast_member filter character_role == \" Q5620660 \" ^^wd:entity ] of @wd . entity ( ) ;",
+            "gold_answer": "",
+            "paraphrase": "what is the name of the tv show breaking bad ? who is the actor that played gus fring?"
+        },
+        {
+            "question": "who wrote harry potter ?",
+            "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;",
+            "gold_answer": "J. K. Rowling (Q34660)",
+            "paraphrase": "what is the name of the author of harry potter ? who is j.k. rowling ?"
+        },
+        {
+            "question": "who wrote harry potter ?",
+            "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;",
+            "gold_answer": "J. K. Rowling (Q34660)",
+            "paraphrase": "what is the name of the harry potter series ? who is the author of the harry potter series ?"
+        },
+        {
+            "question": "who wrote harry potter ?",
+            "gold": "[ author ] of @wd . entity ( ) filter id == \" Q8337 \" ^^wd:entity ;",
+            "gold_answer": "J. K. Rowling (Q34660)",
+            "paraphrase": "what is the name of the harry potter series ? who is the author of the harry potter books?"
+        },
+        {
+            "question": "which actors play in big bang theory ?",
+            "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;",
+            "gold_answer": "Charlie Sheen (Q103939)\nGeorge Takei (Q110154)\nRiki Lindhome (Q120406)\nStan Lee (Q181900)\nJim Parsons (Q190972)\nand 53 more ...",
+            "paraphrase": "what is the name of the tv show ? who stars in big bang theory ?"
+        },
+        {
+            "question": "which actors play in big bang theory ?",
+            "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;",
+            "gold_answer": "Charlie Sheen (Q103939)\nGeorge Takei (Q110154)\nRiki Lindhome (Q120406)\nStan Lee (Q181900)\nJim Parsons (Q190972)\nand 53 more ...",
+            "paraphrase": "how many actors are in big bang theory ? who plays the characters of sheldon cooper, leonard hofstadter, penny and raj koothrappali ?"
+        },
+        {
+            "question": "which actors play in big bang theory ?",
+            "gold": "[ cast_member ] of @wd . entity ( ) filter id == \" Q8539 \" ^^wd:entity ;",
+            "gold_answer": "Charlie Sheen (Q103939)\nGeorge Takei (Q110154)\nRiki Lindhome (Q120406)\nStan Lee (Q181900)\nJim Parsons (Q190972)\nand 53 more ...",
+            "paraphrase": "how many actors are in big bang theory ? who are the actors in big bang theory?"
+        },
+        {
+            "question": "what is the largest country in the world ?",
+            "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;",
+            "gold_answer": "Union State (Q166110)",
+            "paraphrase": "what is the area of russia ? what is the population of china?"
+        },
+        {
+            "question": "what is the largest country in the world ?",
+            "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;",
+            "gold_answer": "Union State (Q166110)",
+            "paraphrase": "what is the total land area of the largest country in the world ?"
+        },
+        {
+            "question": "what is the largest country in the world ?",
+            "gold": "sort ( area desc of @wd . country ( ) ) [ 1 ] ;",
+            "gold_answer": "Union State (Q166110)",
+            "paraphrase": "what is the area of russia ? what is the area of canada ? what is the area of china ? which country is the largest in terms of area ?"
+        },
+        {
+            "question": "which states border illinois ?",
+            "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;",
+            "gold_answer": "Michigan (Q1166)\nIndiana (Q1415)\nWisconsin (Q1537)\nIowa (Q1546)\nMissouri (Q1581)\nand 1 more ...",
+            "paraphrase": "which states are adjacent to illinois?"
+        },
+        {
+            "question": "which states border illinois ?",
+            "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;",
+            "gold_answer": "Michigan (Q1166)\nIndiana (Q1415)\nWisconsin (Q1537)\nIowa (Q1546)\nMissouri (Q1581)\nand 1 more ...",
+            "paraphrase": "what states border illinois? which states are adjacent to illinois?"
+        },
+        {
+            "question": "which states border illinois ?",
+            "gold": "[ shares_border_with ] of @wd . entity ( ) filter id == \" Q1204 \" ^^wd:entity ;",
+            "gold_answer": "Michigan (Q1166)\nIndiana (Q1415)\nWisconsin (Q1537)\nIowa (Q1546)\nMissouri (Q1581)\nand 1 more ...",
+            "paraphrase": "which states are north of illinois? which states are south of illinois? which states are east of illinois? which states are west of illinois?"
+        },
+        {
+            "question": "how many goals did pelé score ?",
+            "gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;",
+            "gold_answer": "",
+            "paraphrase": "who is pelé ? how many goals did edson arantes do nascimento score?"
+        },
+        {
+            "question": "how many goals did pelé score ?",
+            "gold": "count ( member_of_sports_team of @wd . entity ( ) filter id == \" Q12897 \" ^^wd:entity ) ;",
+            "gold_answer": "",
+            "paraphrase": "what is pelé's career goal tally?"
+        },
+        {
+            "question": "who is the president of eritrea ?",
+            "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;",
+            "gold_answer": "Isaias Afwerki (Q57348)",
+            "paraphrase": "what country is eritrea ? who is the president of eritrea?"
+        },
+        {
+            "question": "who is the president of eritrea ?",
+            "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;",
+            "gold_answer": "Isaias Afwerki (Q57348)",
+            "paraphrase": "what is the name of the president of eritrea ? who is the current president of eritrea?"
+        },
+        {
+            "question": "who is the president of eritrea ?",
+            "gold": "[ head_of_state ] of @wd . entity ( ) filter id == \" Q986 \" ^^wd:entity ;",
+            "gold_answer": "Isaias Afwerki (Q57348)",
+            "paraphrase": "what country is eritrea in ? who is the president of eritrea ?"
+        },
+        {
+            "question": "which computer scientist won an oscar ?",
+            "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;",
+            "gold_answer": "Paul Debevec (Q93006)\nEdwin Catmull (Q93161)\nDemetri Terzopoulos (Q3022082)\nHenrik Wann Jensen (Q5716583)\nKen Perlin (Q6388302)\nand 2 more ...",
+            "paraphrase": "who won an oscar ? what type of award was it ? who is a computer scientist ?"
+        },
+        {
+            "question": "which computer scientist won an oscar ?",
+            "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;",
+            "gold_answer": "Paul Debevec (Q93006)\nEdwin Catmull (Q93161)\nDemetri Terzopoulos (Q3022082)\nHenrik Wann Jensen (Q5716583)\nKen Perlin (Q6388302)\nand 2 more ...",
+            "paraphrase": "who won an oscar ? what field of science does turing award winner grace hopper specialize in ?"
+        },
+        {
+            "question": "which computer scientist won an oscar ?",
+            "gold": "@wd . entity ( ) filter contains ( award_received , any ( [ id ] of @wd . event ( ) filter instance_of == \" Q19020 \" ^^wd:domain ) ) && contains ( occupation , \" Q82594 \" ^^wd:entity ) ;",
+            "gold_answer": "Paul Debevec (Q93006)\nEdwin Catmull (Q93161)\nDemetri Terzopoulos (Q3022082)\nHenrik Wann Jensen (Q5716583)\nKen Perlin (Q6388302)\nand 2 more ...",
+            "paraphrase": "who won an oscar ? what field of science did turing award winner grace hopper study ?"
+        },
+        {
+            "question": "who created family guy ?",
+            "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;",
+            "gold_answer": "Seth MacFarlane (Q188492)",
+            "paraphrase": "what is the name of the show family guy ? who is the creator of family guy ?"
+        },
+        {
+            "question": "who created family guy ?",
+            "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;",
+            "gold_answer": "Seth MacFarlane (Q188492)",
+            "paraphrase": "what is the name of the creator of family guy? what is seth macfarlane's profession?"
+        },
+        {
+            "question": "who created family guy ?",
+            "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q5930 \" ^^wd:entity ;",
+            "gold_answer": "Seth MacFarlane (Q188492)",
+            "paraphrase": "who is the creator of family guy ? what is seth macfarlane's profession?"
+        },
+        {
+            "question": "how many people live in poland ?",
+            "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the population of poland ?"
+        },
+        {
+            "question": "how many people live in poland ?",
+            "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the population of poland ? how many people reside in poland?"
+        },
+        {
+            "question": "how many people live in poland ?",
+            "gold": "[ population ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the population of poland ?"
+        },
+        {
+            "question": "to which party does the mayor of paris belong ?",
+            "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Socialist Party (Q170972)",
+            "paraphrase": "who is the mayor of paris ? what party does anne hidalgo belong?"
+        },
+        {
+            "question": "to which party does the mayor of paris belong ?",
+            "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Socialist Party (Q170972)",
+            "paraphrase": "who is the mayor of paris ? what party does anne hidalgo belong to?"
+        },
+        {
+            "question": "to which party does the mayor of paris belong ?",
+            "gold": "[ < head_of_government / member_of_political_party > ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Socialist Party (Q170972)",
+            "paraphrase": "who is the mayor of paris ? what party does anne hidalgo belong?"
+        },
+        {
+            "question": "who does the voice of bart simpson ?",
+            "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;",
+            "gold_answer": "None",
+            "paraphrase": "who is bart simpson ? who does the voice of bart simpson?"
+        },
+        {
+            "question": "who does the voice of bart simpson ?",
+            "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;",
+            "gold_answer": "None",
+            "paraphrase": "what is the name of the character bart simpson ? who does the voice of nancy cartwright?"
+        },
+        {
+            "question": "who does the voice of bart simpson ?",
+            "gold": "[ voice_actor ] of @wd . entity ( ) filter id == \" Q5480 \" ^^wd:entity ;",
+            "gold_answer": "None",
+            "paraphrase": "who is the voice actor for bart simpson ? who is the voice of bart simpson in the simpsons tv show ?"
+        },
+        {
+            "question": "who composed the soundtrack for cameron ' s titanic ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;",
+            "gold_answer": "James Horner (Q106221)",
+            "paraphrase": "who is the composer of the soundtrack for titanic? what is james horner's best known work?"
+        },
+        {
+            "question": "who composed the soundtrack for cameron ' s titanic ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;",
+            "gold_answer": "James Horner (Q106221)",
+            "paraphrase": "who composed the music for titanic ? what is the name of the composer for the titanic soundtrack?"
+        },
+        {
+            "question": "who composed the soundtrack for cameron ' s titanic ?",
+            "gold": "[ composer ] of @wd . entity ( ) filter id == \" Q44578 \" ^^wd:entity ;",
+            "gold_answer": "James Horner (Q106221)",
+            "paraphrase": "which movie was composed by james horner ? who composed the soundtrack for titanic ?"
+        },
+        {
+            "question": "when did boris becker end his active career ?",
+            "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who is boris becker? when did boris becker retire from tennis?"
+        },
+        {
+            "question": "when did boris becker end his active career ?",
+            "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who is boris becker ? when did boris becker retire from professional tennis?"
+        },
+        {
+            "question": "when did boris becker end his active career ?",
+            "gold": "[ occupation . end_time ] of @wd . entity ( ) filter id == \" Q76334 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what year did boris becker end his active career ?"
+        },
+        {
+            "question": "show me all basketball players that are higher than 2 meters .",
+            "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;",
+            "gold_answer": "",
+            "paraphrase": "what is the height of basketball players ? which basketball players are taller than 2 meters?"
+        },
+        {
+            "question": "show me all basketball players that are higher than 2 meters .",
+            "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;",
+            "gold_answer": "",
+            "paraphrase": "what sport are we talking about ? what is the minimum height requirement for basketball players ?"
+        },
+        {
+            "question": "show me all basketball players that are higher than 2 meters .",
+            "gold": "@wd . entity ( ) filter contains ( occupation , \" Q3665646 \" ^^wd:entity ) && height >= 2 m ;",
+            "gold_answer": "",
+            "paraphrase": "what sport is basketball? what is the height requirement for basketball players?"
+        },
+        {
+            "question": "what country is sitecore from ?",
+            "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;",
+            "gold_answer": "Denmark (Q35)",
+            "paraphrase": "where is sitecore located ? what is the nationality of sitecore?"
+        },
+        {
+            "question": "what country is sitecore from ?",
+            "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;",
+            "gold_answer": "Denmark (Q35)",
+            "paraphrase": "where is sitecore based ? what country is sitecore from ?"
+        },
+        {
+            "question": "what country is sitecore from ?",
+            "gold": "[ country ] of @wd . entity ( ) filter id == \" Q2663195 \" ^^wd:entity ;",
+            "gold_answer": "Denmark (Q35)",
+            "paraphrase": "what is sitecore? what country is sitecore headquartered in ?"
+        },
+        {
+            "question": "which country was bill gates born in ?",
+            "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;",
+            "gold_answer": "United States of America (Q30)",
+            "paraphrase": "where was bill gates born ? what country is bill gates from?"
+        },
+        {
+            "question": "which country was bill gates born in ?",
+            "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;",
+            "gold_answer": "United States of America (Q30)",
+            "paraphrase": "what year was bill gates born ? in which country was bill gates born?"
+        },
+        {
+            "question": "which country was bill gates born in ?",
+            "gold": "[ < place_of_birth / country > ] of @wd . entity ( ) filter id == \" Q5284 \" ^^wd:entity ;",
+            "gold_answer": "United States of America (Q30)",
+            "paraphrase": "who is bill gates ? what country was he born in ?"
+        },
+        {
+            "question": "who developed slack ?",
+            "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;",
+            "gold_answer": "Slack Technologies (Q7808625)",
+            "paraphrase": "who created slack ? who is the founder of slack ?"
+        },
+        {
+            "question": "who developed slack ?",
+            "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;",
+            "gold_answer": "Slack Technologies (Q7808625)",
+            "paraphrase": "what is slack ? who created slack ?"
+        },
+        {
+            "question": "who developed slack ?",
+            "gold": "@wd . entity ( ) filter contains ( product_or_material_produced , \" Q17130715 \" ^^wd:entity ) ;",
+            "gold_answer": "Slack Technologies (Q7808625)",
+            "paraphrase": "who created slack ? what company developed slack ?"
+        },
+        {
+            "question": "in which city did nikos kazantzakis die ?",
+            "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;",
+            "gold_answer": "Freiburg im Breisgau (Q2833)",
+            "paraphrase": "who was nikos kazantzakis ? when did nikos kazantzakis die ?"
+        },
+        {
+            "question": "in which city did nikos kazantzakis die ?",
+            "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;",
+            "gold_answer": "Freiburg im Breisgau (Q2833)",
+            "paraphrase": "who is nikos kazantzakis ? what year did nikos kazantzakis die ? where did nikos kazantzakis die ?"
+        },
+        {
+            "question": "in which city did nikos kazantzakis die ?",
+            "gold": "[ place_of_death ] of @wd . entity ( ) filter id == \" Q214622 \" ^^wd:entity ;",
+            "gold_answer": "Freiburg im Breisgau (Q2833)",
+            "paraphrase": "who was nikos kazantzakis ? what city did he die in ?"
+        },
+        {
+            "question": "how many grand-children did jacques cousteau have ?",
+            "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;",
+            "gold_answer": "",
+            "paraphrase": "who is jacques cousteau ? how many children did he have ? how many grandchildren did they have ?"
+        },
+        {
+            "question": "how many grand-children did jacques cousteau have ?",
+            "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;",
+            "gold_answer": "",
+            "paraphrase": "how many children did jacques cousteau have ? how many grandchildren does each of jacques cousteau's children have ?"
+        },
+        {
+            "question": "how many grand-children did jacques cousteau have ?",
+            "gold": "count ( @wd . human ( ) filter in_array ( id , any ( [ < child / child > ] of @wd . entity ( ) filter id == \" Q83233 \" ^^wd:entity ) ) ) ;",
+            "gold_answer": "",
+            "paraphrase": "who was jacques cousteau? how many grandchildren did he have ?"
+        },
+        {
+            "question": "which films did stanley kubrick direct ?",
+            "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;",
+            "gold_answer": "2001: A Space Odyssey (Q103474)\nDr. Strangelove (Q105702)\nSpartacus (Q108297)\nA Clockwork Orange (Q181086)\nThe Shining (Q186341)\nand 12 more ...",
+            "paraphrase": "who is stanley kubrick ? what films did kubrick direct?"
+        },
+        {
+            "question": "which films did stanley kubrick direct ?",
+            "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;",
+            "gold_answer": "2001: A Space Odyssey (Q103474)\nDr. Strangelove (Q105702)\nSpartacus (Q108297)\nA Clockwork Orange (Q181086)\nThe Shining (Q186341)\nand 12 more ...",
+            "paraphrase": "who is stanley kubrick? what films did stanley kubrick direct?"
+        },
+        {
+            "question": "which films did stanley kubrick direct ?",
+            "gold": "@wd . entity ( ) filter contains ( director , \" Q2001 \" ^^wd:entity ) ;",
+            "gold_answer": "2001: A Space Odyssey (Q103474)\nDr. Strangelove (Q105702)\nSpartacus (Q108297)\nA Clockwork Orange (Q181086)\nThe Shining (Q186341)\nand 12 more ...",
+            "paraphrase": "who is stanley kubrick ? what movies did he direct?"
+        },
+        {
+            "question": "does neymar play for real madrid ?",
+            "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "which club does neymar play for ? does neymar play for fc barcelona ?"
+        },
+        {
+            "question": "does neymar play for real madrid ?",
+            "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what team does neymar play for ? does neymar play for real madrid football club ?"
+        },
+        {
+            "question": "does neymar play for real madrid ?",
+            "gold": "[ contains ( member_of_sports_team , \" Q8682 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q142794 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "who is neymar ? what team does neymar play for ?"
+        },
+        {
+            "question": "how many seats does the home stadium of fc porto have ?",
+            "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the home stadium of fc porto? how many seats does estádio do dragão have?"
+        },
+        {
+            "question": "how many seats does the home stadium of fc porto have ?",
+            "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the home stadium of fc porto ? how many seats does estádio do dragão have ?"
+        },
+        {
+            "question": "how many seats does the home stadium of fc porto have ?",
+            "gold": "[ < home_venue / maximum_capacity > ] of @wd . entity ( ) filter id == \" Q128446 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the home stadium of fc porto? how many seats does estádio do dragão have?"
+        },
+        {
+            "question": "show me all books in asimov ' s foundation series .",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;",
+            "gold_answer": "Foundation (Q753894)\nPrelude to Foundation (Q783533)\nFoundation and Empire (Q839800)\nSecond Foundation (Q853927)\nFoundation’s Edge (Q932592)\nand 2 more ...",
+            "paraphrase": "how many books are in asimov's foundation series ? what are the titles of the books in the foundation series ?"
+        },
+        {
+            "question": "show me all books in asimov ' s foundation series .",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;",
+            "gold_answer": "Foundation (Q753894)\nPrelude to Foundation (Q783533)\nFoundation and Empire (Q839800)\nSecond Foundation (Q853927)\nFoundation’s Edge (Q932592)\nand 2 more ...",
+            "paraphrase": "which books are in asimov's foundation series ? how many books are in asimov's foundation series ?"
+        },
+        {
+            "question": "show me all books in asimov ' s foundation series .",
+            "gold": "[ has_parts ] of @wd . entity ( ) filter id == \" Q1564644 \" ^^wd:entity ;",
+            "gold_answer": "Foundation (Q753894)\nPrelude to Foundation (Q783533)\nFoundation and Empire (Q839800)\nSecond Foundation (Q853927)\nFoundation’s Edge (Q932592)\nand 2 more ...",
+            "paraphrase": "what is the foundation series by asimov? what books are included in the foundation series by asimov?"
+        },
+        {
+            "question": "which movies star both liz taylor and richard burton ?",
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;",
+            "gold_answer": "Who's Afraid of Virginia Woolf? (Q325643)\nThe Sandpiper (Q426314)\nThe Comedians (Q568696)\nHammersmith Is Out (Q634049)\nBoom! (Q668569)\nand 7 more ...",
+            "paraphrase": "which movies featured liz taylor? which movies featured richard burton? which movies starred both liz taylor and richard burton?"
+        },
+        {
+            "question": "which movies star both liz taylor and richard burton ?",
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;",
+            "gold_answer": "Who's Afraid of Virginia Woolf? (Q325643)\nThe Sandpiper (Q426314)\nThe Comedians (Q568696)\nHammersmith Is Out (Q634049)\nBoom! (Q668569)\nand 7 more ...",
+            "paraphrase": "what movies did liz taylor star in? what movies did richard burton star in? what movies did both liz taylor and richard burton star in?"
+        },
+        {
+            "question": "which movies star both liz taylor and richard burton ?",
+            "gold": "@wd . entity ( ) filter contains ( cast_member , \" Q34851 \" ^^wd:entity ) && contains ( cast_member , \" Q151973 \" ^^wd:entity ) ;",
+            "gold_answer": "Who's Afraid of Virginia Woolf? (Q325643)\nThe Sandpiper (Q426314)\nThe Comedians (Q568696)\nHammersmith Is Out (Q634049)\nBoom! (Q668569)\nand 7 more ...",
+            "paraphrase": "which actors star in which movies? which movies star liz taylor and richard burton?"
+        },
+        {
+            "question": "in which city are the headquarters of the united nations ?",
+            "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;",
+            "gold_answer": "New York City (Q60)",
+            "paraphrase": "where are the headquarters of the united nations? what city are the headquarters of the united nations located in?"
+        },
+        {
+            "question": "in which city are the headquarters of the united nations ?",
+            "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;",
+            "gold_answer": "New York City (Q60)",
+            "paraphrase": "where are the headquarters of the united nations? what city is the united nations headquarters in?"
+        },
+        {
+            "question": "in which city are the headquarters of the united nations ?",
+            "gold": "[ located_in_the_administrative_territorial_entity : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q11297 \" ^^wd:entity ;",
+            "gold_answer": "New York City (Q60)",
+            "paraphrase": "where are the headquarters of the united nations ? where is the united nations building located?"
+        },
+        {
+            "question": "in which city was the president of montenegro born ?",
+            "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;",
+            "gold_answer": "Nikšić (Q200733)",
+            "paraphrase": "who is the president of montenegro ? where was milo dukanović born?"
+        },
+        {
+            "question": "in which city was the president of montenegro born ?",
+            "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;",
+            "gold_answer": "Nikšić (Q200733)",
+            "paraphrase": "who is the president of montenegro ? what city was milo dukanović born in?"
+        },
+        {
+            "question": "in which city was the president of montenegro born ?",
+            "gold": "[ < head_of_state / place_of_birth > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q236 \" ^^wd:entity ;",
+            "gold_answer": "Nikšić (Q200733)",
+            "paraphrase": "who is the president of montenegro ? where was milo dukanović born?"
+        },
+        {
+            "question": "which writers studied in istanbul ?",
+            "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;",
+            "gold_answer": "Behçet Necatigil (Q198849)\nİsmet Giritli (Q344228)\nAhmet Yalçınkaya (Q401956)\nAli Bayramoğlu (Q462705)\nDemir Özlü (Q668833)\nand 307 more ...",
+            "paraphrase": "where did writers study ? what writers studied in istanbul?"
+        },
+        {
+            "question": "which writers studied in istanbul ?",
+            "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;",
+            "gold_answer": "Behçet Necatigil (Q198849)\nİsmet Giritli (Q344228)\nAhmet Yalçınkaya (Q401956)\nAli Bayramoğlu (Q462705)\nDemir Özlü (Q668833)\nand 307 more ...",
+            "paraphrase": "who are the writers ? what universities are in istanbul ?"
+        },
+        {
+            "question": "which writers studied in istanbul ?",
+            "gold": "@wd . entity ( ) filter contains ( < educated_at / located_in_the_administrative_territorial_entity > , \" Q406 \" ^^wd:entity ) && contains ( occupation , \" Q36180 \" ^^wd:entity ) ;",
+            "gold_answer": "Behçet Necatigil (Q198849)\nİsmet Giritli (Q344228)\nAhmet Yalçınkaya (Q401956)\nAli Bayramoğlu (Q462705)\nDemir Özlü (Q668833)\nand 307 more ...",
+            "paraphrase": "who are the writers from istanbul? what writers studied in istanbul?"
+        },
+        {
+            "question": "who is the mayor of paris ?",
+            "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Anne Hidalgo (Q2851133)",
+            "paraphrase": "what is the name of the mayor of paris ? who is anne hidalgo ?"
+        },
+        {
+            "question": "who is the mayor of paris ?",
+            "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Anne Hidalgo (Q2851133)",
+            "paraphrase": "what is the name of the mayor of paris ? who is anne hidalgo?"
+        },
+        {
+            "question": "who is the mayor of paris ?",
+            "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q90 \" ^^wd:entity ;",
+            "gold_answer": "Anne Hidalgo (Q2851133)",
+            "paraphrase": "what is the name of the mayor of paris ? who is anne hidalgo ?"
+        },
+        {
+            "question": "what is the full name of prince charles ?",
+            "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the first name of prince charles ? what is the surname of prince charles ?"
+        },
+        {
+            "question": "what is the full name of prince charles ?",
+            "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is prince charles's first name ? what is prince charles's last name ?"
+        },
+        {
+            "question": "what is the full name of prince charles ?",
+            "gold": "[ family_name , given_name ] of @wd . entity ( ) filter id == \" Q43274 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what is the given name of prince charles ? what is the surname of prince charles ?"
+        },
+        {
+            "question": "what is the longest river in china ?",
+            "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;",
+            "gold_answer": "Yangtze (Q5413)",
+            "paraphrase": "where is the longest river in china? what is the name of the river?"
+        },
+        {
+            "question": "what is the longest river in china ?",
+            "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;",
+            "gold_answer": "Yangtze (Q5413)",
+            "paraphrase": "what are the major rivers in china ? which river is the longest in china ?"
+        },
+        {
+            "question": "what is the longest river in china ?",
+            "gold": "sort ( length desc of @wd . river ( ) filter contains ( country , \" Q148 \" ^^wd:entity ) ) [ 1 ] ;",
+            "gold_answer": "Yangtze (Q5413)",
+            "paraphrase": "what is the longest river in the world ? what is the longest river in asia ?"
+        },
+        {
+            "question": "who discovered ceres ?",
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;",
+            "gold_answer": "Giuseppe Piazzi (Q14280)",
+            "paraphrase": "what year was ceres discovered ? who discovered ceres in 1801 ?"
+        },
+        {
+            "question": "who discovered ceres ?",
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;",
+            "gold_answer": "Giuseppe Piazzi (Q14280)",
+            "paraphrase": "when was ceres discovered ? who discovered the dwarf planet in 1801?"
+        },
+        {
+            "question": "who discovered ceres ?",
+            "gold": "[ discoverer_or_inventor ] of @wd . entity ( ) filter id == \" Q596 \" ^^wd:entity ;",
+            "gold_answer": "Giuseppe Piazzi (Q14280)",
+            "paraphrase": "when was ceres discovered? who discovered ceres in 1801 ?"
+        },
+        {
+            "question": "when did princess diana die ?",
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what year did princess diana die ?"
+        },
+        {
+            "question": "when did princess diana die ?",
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what year did princess diana die?"
+        },
+        {
+            "question": "when did princess diana die ?",
+            "gold": "[ date_of_death ] of @wd . entity ( ) filter id == \" Q9685 \" ^^wd:entity ;",
+            "gold_answer": "",
+            "paraphrase": "what year did princess diana die ?"
+        },
+        {
+            "question": "which presidents were born in 1945 ?",
+            "gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;",
+            "gold_answer": "",
+            "paraphrase": "what year was 1945 ? who were the presidents born in 1945 ?"
+        },
+        {
+            "question": "which presidents were born in 1945 ?",
+            "gold": "@wd . human ( ) filter contains ( position_held , \" Q30461 \" ^^wd:entity ) && date_of_birth <= new Date ( 1945 ) + 1 year && date_of_birth >= new Date ( 1945 ) ;",
+            "gold_answer": "",
+            "paraphrase": "what year was 1945 ? who were the presidents in 1945?"
+        },
+        {
+            "question": "give me all federal chancellors of germany .",
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;",
+            "gold_answer": "Angela Merkel (Q567)\nKonrad Adenauer (Q2492)\nLudwig Erhard (Q2496)\nWilly Brandt (Q2514)\nKurt Georg Kiesinger (Q2512)\nand 5 more ...",
+            "paraphrase": "how many federal chancellors has germany had? who have been the federal chancellors of germany?"
+        },
+        {
+            "question": "give me all federal chancellors of germany .",
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;",
+            "gold_answer": "Angela Merkel (Q567)\nKonrad Adenauer (Q2492)\nLudwig Erhard (Q2496)\nWilly Brandt (Q2514)\nKurt Georg Kiesinger (Q2512)\nand 5 more ...",
+            "paraphrase": "how many federal chancellors have there been in germany ? who were the federal chancellors of germany ?"
+        },
+        {
+            "question": "give me all federal chancellors of germany .",
+            "gold": "@wd . entity ( ) filter contains ( position_held , \" Q4970706 \" ^^wd:entity ) ;",
+            "gold_answer": "Angela Merkel (Q567)\nKonrad Adenauer (Q2492)\nLudwig Erhard (Q2496)\nWilly Brandt (Q2514)\nKurt Georg Kiesinger (Q2512)\nand 5 more ...",
+            "paraphrase": "who were the federal chancellors of germany ?"
+        },
+        {
+            "question": "how many moons does mars have ?",
+            "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;",
+            "gold_answer": "Mars Reconnaissance Orbiter (Q183160)\nMariner 9 (Q203801)\nMars Express (Q205672)\nMars Global Surveyor (Q206300)\n2001 Mars Odyssey (Q207164)\nand 11 more ...",
+            "paraphrase": "what is the name of the planet mars? how many moons does mars have?"
+        },
+        {
+            "question": "how many moons does mars have ?",
+            "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;",
+            "gold_answer": "Mars Reconnaissance Orbiter (Q183160)\nMariner 9 (Q203801)\nMars Express (Q205672)\nMars Global Surveyor (Q206300)\n2001 Mars Odyssey (Q207164)\nand 11 more ...",
+            "paraphrase": "how many natural satellites does mars have?"
+        },
+        {
+            "question": "how many moons does mars have ?",
+            "gold": "[ child_astronomical_body ] of @wd . entity ( ) filter id == \" Q111 \" ^^wd:entity ;",
+            "gold_answer": "Mars Reconnaissance Orbiter (Q183160)\nMariner 9 (Q203801)\nMars Express (Q205672)\nMars Global Surveyor (Q206300)\n2001 Mars Odyssey (Q207164)\nand 11 more ...",
+            "paraphrase": "what is the celestial body of mars ? how many moons does mars have?"
+        }
+    ]
+}

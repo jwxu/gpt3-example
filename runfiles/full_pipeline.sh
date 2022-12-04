@@ -39,6 +39,24 @@ python src/generator.py \
     --engine text-curie-001 \
     --num_gen 3
 
+# Run GPT-3 with simplified paraphrase inputs
+# Input: JSON file of list of questions
+# Output: JSON of questions and corresponding paraphrases
+# {
+#     data: [
+#       {
+#           question: "Question",
+#           paraphrase: "Paraphrase",
+#        }
+#     ]
+# }
+python src/generator.py \
+    --prompt_template_file "src/data/prompts/simplify.prompt" \
+    --input_file "src/data/input/paraphrases.json" \
+    --output_file "src/data/input/gpt3_paraphrases_simplified.json" \
+    --engine text-davinci-003 \
+    --num_gen 3
+
 # Generate answers to GPT-3 paraphrases
 # Input: JSON of questions and corresponding paraphrases
 # {
