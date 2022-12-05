@@ -8,26 +8,44 @@ def get_arg_parse():
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_file', type=str, required=True, help='Where to read input questions from.')
+    parser.add_argument('--baseline_file', type=str, help='Where to read baseline questions from.')
+    parser.add_argument('--twoshot', action='store_true', help='Two-Shot accuracy')
     args = parser.parse_args()
 
     return args
 
 
-def get_query_accuracy_2(file):
+def get_baseline_query_accuracy(file):
+    with open(file) as json_file:
+        data = json.load(json_file)['data']
+
+    questions_answer = {}
+    for question in data:
+        q = question['question']
+        if twoshot:
+            if question['gold'] == question['thingtalk']:
+                questions_answer[q] = 1
+            else:
+                questions_answer[q] = 0
+        else:
+            questions_answer[q] = 0
+    
+    return questions_answer
+
+
+def get_query_accuracy_2(file, baseline_file):
     with open(file) as json_file:
         data = json.load(json_file)['data']
     
     
-    questions_answer = {}
-    for question in data:
-        q = question['question']
-        if q not in questions_answer.keys():
-            questions_answer[q] = 0
-
-        if question['gold'] == question['thingtalk']:
-            questions_answer[q] += 1
-            # print(q)
-            # print(question['thingtalk'])
+    questions_answer = get_baseline_query_accuracy(baseline_file)
+    if file != baseline_file:
+        for question in data:
+            q = question['question']
+            if question['gold'] == question['thingtalk']:
+                questions_answer[q] += 1
+                # print(q)
+                # print(question['thingtalk'])
 
     correct = 0
     total = 0
@@ -43,22 +61,22 @@ def get_query_accuracy_2(file):
     return accuracy
 
 
-def get_answer_accuracy_2(file):
+def get_answer_accuracy_2(file, baseline_file):
     with open(file) as json_file:
         data = json.load(json_file)['data']
     
-    
-    questions_answer = {}
-    for question in data:
-        q = question['question']
-        if q not in questions_answer.keys():
-            questions_answer[q] = 0
+    questions_answer = get_baseline_query_accuracy(baseline_file)
+    if file != baseline_file:
+        for question in data:
+            q = question['question']
+            if q not in questions_answer.keys():
+                questions_answer[q] = 0
 
-        if question['answer'] != "" and question['gold_answer'] != "None":
-            if question['gold_answer'] == question['answer']:
-                questions_answer[q] += 1
-                # print(q)
-                # print(question['thingtalk'])
+            if question['answer'] != "" and question['gold_answer'] != "None":
+                if question['gold_answer'] == question['answer']:
+                    questions_answer[q] += 1
+                    # print(q)
+                    # print(question['thingtalk'])
 
     correct = 0
     total = 0
@@ -138,7 +156,8 @@ def get_answer_accuracy(file):
 
 if __name__ == "__main__":
     args = get_arg_parse()
-    get_query_accuracy_2(args.input_file)
-    get_answer_accuracy_2(args.input_file)
+    twoshot = args.twoshot
+    get_query_accuracy_2(args.input_file, args.baseline_file)
+    get_answer_accuracy_2(args.input_file, args.baseline_file)
     # get_query_accuracy(args.input_file)
     # get_answer_accuracy(args.input_file)
