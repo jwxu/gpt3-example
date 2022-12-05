@@ -57,6 +57,16 @@ python src/generator.py \
     --engine text-davinci-003 \
     --num_gen 3
 
+# Run GPT-3 with thingtalk paraphrase inputs
+# Input: JSON file of list of thingtalk paraphrased questions
+# Output: JSON of questions and corresponding simplified thingtalk paraphrases
+python src/generator.py \
+    --prompt_template_file "src/data/prompts/simplify.prompt" \
+    --input_file "src/data/output/fewshot_thingtalk_answer.json" \
+    --output_file "src/data/input/gpt3_thingtalk_simplified_paraphrases.json" \
+    --engine text-davinci-003 \
+    --num_gen 3
+
 # Generate answers to GPT-3 paraphrases
 # Input: JSON of questions and corresponding paraphrases
 # {

@@ -70,7 +70,7 @@ def get_answer_accuracy_2(file):
     accuracy = correct / total
     print("Correct: ", correct)
     print("Total: ", total)
-    print("Query Accuracy: ", accuracy)
+    print("Answer Accuracy: ", accuracy)
     return accuracy
     
     # questions_thingtalk = {}

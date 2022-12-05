@@ -83,7 +83,7 @@ def gen_question(args):
                 break
 
             if reply != prev_reply:
-                question_para['paraphrase'] = reply
+                question_para['paraphrase'] = reply.lower()
                 question_gen['data'].append(question_para)
                 prev_reply = reply
         
