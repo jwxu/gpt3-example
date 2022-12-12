@@ -1,32 +1,67 @@
-# A simple example of using GPT-3
+# Improving Semantic Parsing Using LLMs
 
-## Installation
+## Setup
 
-First, find the secret OpenAI API key from [this](https://beta.openai.com/account/api-keys) page.
-
-Then, create a text file named `API_KEYS` in this folder and put your OpenAI API key for access to GPT-3 models:
-
-`export OPENAI_API_KEY=<your OpenAI API key>`
-
-This file is in `.gitignore` since it is important that you do not accidentally commit your key.
-Install the python packages specified in `requirements.txt`:
-
+Install required packages
 ```bash
 pip install -r requirements.txt
 ```
 
-## Running the example
+Setup GPT-3. Find the secret OpenAI API key from [this](https://beta.openai.com/account/api-keys) page. Run `export OPENAI_API_KEY=<your OpenAI API key>` in your terminal.
 
-This example reads partial conversations from a text file (partial_dialogs.txt) and uses GPT-3 to generate continuations for them. It then classfies each new utterance based on being related/unrelated to the topic of "pets". This demonstrates bothe generation and classification capabilities of GPT-3.
+Prepare the semantic parse by following the instructions under src/semantic_parse/README.md
 
+## Generate GPT-3 Input Questions
 
-Run the following command. The input variables are optional and if not provided, will assume their default values.
+Use `src/utils/gen_gpt_input.py` to generate the questions that GPT-3 will take as input. This can be run as:
 
+```bash
+python src/utils/gen_gpt_input.py  \
+    --input <groundtruth.json> \
+    --output_file <gpt3_input.json> \[--use_thingtalk]
 ```
-make self-chat engine=text-davinci-002 temperature=0.8
+
+groudtruth.json: Groundtruth JSON for fewshot/dev/test
+gpt3_input.json: Output JSON of questions, parsed ThingTalk, and answers that will be used as GPT-3 input
+use_thingtalk: Whether to generate ThingTalk-based questions
+
+### Run GPT-3
+
+Use `src/generator.py` to run GPT-3 with specified prompt and question inputs This can be run as:
+
+```bash
+python src/generator.py \
+    --prompt_template_file <prompt.prompt> \
+    --input_file <gpt3_input.json> \
+    --output_file <gpt3_output.json> \
+    [--use_thingtalk]
 ```
 
-Please read through the Makefil and follow the Python code. Make sure you understand how the code works before using it for your project.
-The `NeuralWorker` class is at the center of this example, and is meant to be reusable for text generation and classfication tasks.
-IT calls `openai.Completion.create()` from the `openai` Python library.
-In order to understand what this function does, read the [Create completion](https://beta.openai.com/docs/api-reference/completions/create) documentation.
+prompt.prompt: GPT-3 prompt file
+gpt3_input.json: Output JSON of questions, parsed ThingTalk, and answers that will be used as GPT-3 input
+gpt3_output.json: JSON of questions and corresponding paraphrases
+use_thingtalk: Whether to generate ThingTalk-based questions
+There are additional flags for GPT-3 parameters that can be configured. See `src/generator.py` details
+
+### Generate Answer
+
+Update the filepaths in `src/semantic_parse/index.js` and run `node index.js` to generate answers to the GPT-3 paraphrases
+
+### Evaluate
+
+Use `src/utils/eval.py` to run GPT-3 with specified prompt and question inputs This can be run as:
+
+```bash
+python src/utils/eval.py \
+    --input_file <answer.json> \
+    --baseline_file <baseline_answer.json>\
+    --twoshot
+```
+
+answer.json: JSON of question and semantic parser output for the semantic parse output
+baseline_answer.json: JSON of question and semantic parser output for the baseline
+twoshot: Whether to calculate one-shot or two-shot accuracy
+
+### Example
+
+The file `runfiles\full_pipelin.sh` contains examples of running each of these steps.

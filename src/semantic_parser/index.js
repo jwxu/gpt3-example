@@ -26,7 +26,8 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    const fileStream = JSON.parse(fs.readFileSync("../data/input/gpt3_paraphrases_simplified.json", { encoding: 'utf8' })).data;
+    const fileStream = JSON.parse(fs.readFileSync("../data/input/davinci2/gpt3_tt_paraphrases_dev.json", { encoding: 'utf8' })).data;
+    // const fileStream = JSON.parse(fs.readFileSync("../data/training_files/dev.json", { encoding: 'utf8' })).data;
 
     var returnObj = {
         data: []
@@ -119,9 +120,12 @@ async function main() {
     }
 
     var json = JSON.stringify(returnObj, null, 4);
-        fs.writeFile('../data/output/paraphrase_simplified_answer.json', json, 'utf8', function (err) {
-            if (err) {return console.error(err);};
-        });
+    fs.writeFile('../data/output/davinci2/gpt3_tt_paraphrases_dev.json', json, 'utf8', function (err) {
+        if (err) {return console.error(err);};
+    });
+    // fs.writeFile('../data/output/baseline/paraphrase_answer_.json', json, 'utf8', function (err) {
+    //     if (err) {return console.error(err);};
+    // });
 }
 
 main();

@@ -1,0 +1,40 @@
+Write a question that paraphrases the following question:
+
+Q: who wrote the song hotel california ?
+W: composer
+who was the composer of hotel california ?
+
+Q: who was on the apollo 11 mission ?
+W: crew members
+who were the crew members of the Apollo 11 mission ?
+
+Q: what is in a chocolate chip cookie ?
+W: has parts
+a chocolate chip cookie has what parts?
+
+Q: in which united states state is mount mckinley located ?
+W: located in the administrative territorial entity
+in which administrative territorial entity is mount McKinley located?
+
+Q: when did the boston tea party take place ?
+W: point in time
+at what point in time did the boston tea party take place?
+
+Q: where does piccadilly start ?
+W: terminus
+what is the terminus of piccadilly ?
+
+Q: who wrote harry potter ?
+W: author
+who is the author of harry potter ?
+
+Q: who is the president of eritrea ?
+W: head of state
+who is the head of state of eritrea ?
+
+Q: which computer scientist won an oscar ?
+W: award received
+which computer scientist received an oscar award ?
+
+Q: {history}
+W: {properties}

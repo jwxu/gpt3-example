@@ -13,7 +13,7 @@
         {
             "question": "give me a list of all canadians that reside in the united states",
             "gold": "@wd . entity ( ) filter contains ( < place_of_birth / country > , \" Q16 \" ^^wd:entity ) && contains ( residence , \" Q30 \" ^^wd:entity ) ;",
-            "gold_answer": "Walter Zinn (Q712154)\nAlbert W. Tucker (Q777234)\nWilliam D’Arcy (Q1419834)\nPierre-Gabriel Huot (Q3383077)\nD. A. Carson (Q5203466)\nand 7 more ..."
+            "gold_answer": "Walter Zinn (Q712154)\nAlbert W. Tucker (Q777234)\nWilliam D\u2019Arcy (Q1419834)\nPierre-Gabriel Huot (Q3383077)\nD. A. Carson (Q5203466)\nand 7 more ..."
         },
         {
             "question": "where is syngman rhee buried ?",
@@ -213,7 +213,7 @@
         {
             "question": "who was vincent van gogh inspired by ?",
             "gold": "[ influenced_by ] of @wd . entity ( ) filter id == \" Q5582 \" ^^wd:entity ;",
-            "gold_answer": "Jean-François Millet (Q148458)\nAnton Mauve (Q591907)\nWillem Roelofs (Q1372280)\nPeter Paul Rubens (Q5599)\nPaul Cézanne (Q35548)\nand 1 more ..."
+            "gold_answer": "Jean-Fran\u00e7ois Millet (Q148458)\nAnton Mauve (Q591907)\nWillem Roelofs (Q1372280)\nPeter Paul Rubens (Q5599)\nPaul C\u00e9zanne (Q35548)\nand 1 more ..."
         },
         {
             "question": "what are the names of the teenage mutant ninja turtles ?",

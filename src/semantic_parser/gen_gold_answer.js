@@ -25,7 +25,7 @@ async function main() {
 
     const wikidata = new QALD.WikidataUtils('wikidata_cache.sqlite', 'bootleg.sqlite', true);
 
-    const fileStream = JSON.parse(fs.readFileSync("../data/training_files/test.json", { encoding: 'utf8' })).data;
+    const fileStream = JSON.parse(fs.readFileSync("../data/training_files/dev.json", { encoding: 'utf8' })).data;
 
     var returnObj = {
         data: []
@@ -104,7 +104,7 @@ async function main() {
     }
 
     var json = JSON.stringify(returnObj, null, 4);
-        fs.writeFile('../data/training_files/test.json', json, 'utf8', function (err) {
+        fs.writeFile('../data/training_files/dev.json', json, 'utf8', function (err) {
             if (err) {return console.error(err);};
         });
 }

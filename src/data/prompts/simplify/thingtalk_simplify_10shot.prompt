@@ -1,0 +1,39 @@
+Simplify the complex question into a single simple question. Generate a simple, basic, sub-question using the given words.
+
+Q: in what school did obama's wife study ?
+W: spouse, educated at
+what school was michelle obama educated at?
+
+Q: who was the president of the united states when stanford university was established ?
+who was the president of the united states in 1981 ?
+
+Q: to which party does the mayor of paris belong ?
+W: head of government
+what political party does anne hidalgo belong?
+
+Q: how many seats does the home stadium of fc porto have ?
+W: home venue, maximum capacity
+what is the maximum capacity of estádio do dragão ?
+
+Q: in which city was the president of montenegro born ?
+W: head of state, place of birth
+what was the place of birth of milo dukanović?
+
+Q: did a famous computer scientist win an oscar ?
+W: award received
+did alan turing win an oscar ?
+
+Q: when was the author of harry potter born ?
+W: date of birth
+what was the date of birth of jk rowling ?
+
+Q: where is the tallest mountain located ?
+W: location
+what is the location of mount everest ?
+
+Q: who was on the first mission to space ?
+W: crew members
+who were the crew members of the apollo 11 mission ?
+
+Q: {history}
+W: {properties}

@@ -1,7 +1,7 @@
 import csv
 import json
 
-filepath = "../data/training_files/fewshot.tsv"
+filepath = "../data/training_files/dev.tsv"
 
 def convert_to_json(filepath):
     returnObj = {
@@ -16,7 +16,7 @@ def convert_to_json(filepath):
         json_object = json.dumps(returnObj, indent=4)
 
         # Writing to sample.json
-        with open("../data/training_files/fewshot.json", "w") as outfile:
+        with open("../data/training_files/dev.json", "w") as outfile:
             outfile.write(json_object)
 
 convert_to_json(filepath)

@@ -101,7 +101,8 @@ def generate_thingtalk_paraphrase(questions_file, output_file):
         for data in questions:
             question = data['question']
             gold = data['gold']
-            prop_words = parse_thingtalk(gold)
+            thingtalk = data['thingtalk']
+            prop_words = parse_thingtalk(thingtalk)
 
             prompt = {}
             prompt["question"] = question

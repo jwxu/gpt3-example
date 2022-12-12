@@ -11,18 +11,28 @@
 #        }
 #     ]
 # }
-# Output: Text file of list of questions
+# Output: JSON of questions, parsed ThingTalk, and answers
+# {
+#     data: [
+#       {
+#           "question": "Question",
+#           "gold": "ThingTalk",
+#           "properties": "ThingTalk properties",
+#           "gold_answer": "Answer"
+#       },
+#     ]
+# }
 python src/utils/gen_gpt_input.py \
-    --input "src/data/training_files/fewshot.json" \
-    --output_file "src/data/input/thingtalk_paraphrases.json" \
+    --input "src/data/training_files/dev.json" \
+    --output_file "src/data/input/gpt3_dev.json"
+
+python src/utils/gen_gpt_input.py \
+    --input "src/data/training_files/dev.json" \
+    --output_file "src/data/input/tt_gpt3_dev.json" \
     --use_thingtalk
 
-python src/utils/gen_gpt_input.py \
-    --input "src/data/training_files/fewshot.json" \
-    --output_file "src/data/input/paraphrases.json"
-
-# Run GPT-3 with thingtalk paraphrase inputs
-# Input: Text file of list of questions
+# Run GPT-3 with specified prompt and question inputs
+# Input: JSON of questions, parsed ThingTalk, and answers
 # Output: JSON of questions and corresponding paraphrases
 # {
 #     data: [
@@ -34,38 +44,24 @@ python src/utils/gen_gpt_input.py \
 # }
 python src/generator.py \
     --prompt_template_file "src/data/prompts/paraphrase.prompt" \
-    --input_file "src/data/input/paraphrases.json" \
-    --output_file "src/data/input/gpt3_paraphrases.json" \
-    --engine text-curie-001 \
-    --num_gen 3
+    --input_file "src/data/input/gpt3_dev.json" \
+    --output_file "src/data/input/gpt3_paraphrases_dev.json" \
+    --engine text-davinci-002 \
+    --num_gen 1 \
+    --temperature 0.8 \
+    --frequency_penalty 0.5 \
+    --presence_penalty 0.5
 
-# Run GPT-3 with simplified paraphrase inputs
-# Input: JSON file of list of questions
-# Output: JSON of questions and corresponding paraphrases
-# {
-#     data: [
-#       {
-#           question: "Question",
-#           paraphrase: "Paraphrase",
-#        }
-#     ]
-# }
 python src/generator.py \
-    --prompt_template_file "src/data/prompts/simplify.prompt" \
-    --input_file "src/data/input/paraphrases.json" \
-    --output_file "src/data/input/gpt3_paraphrases_simplified.json" \
-    --engine text-davinci-003 \
-    --num_gen 3
-
-# Run GPT-3 with thingtalk paraphrase inputs
-# Input: JSON file of list of thingtalk paraphrased questions
-# Output: JSON of questions and corresponding simplified thingtalk paraphrases
-python src/generator.py \
-    --prompt_template_file "src/data/prompts/simplify.prompt" \
-    --input_file "src/data/output/fewshot_thingtalk_answer.json" \
-    --output_file "src/data/input/gpt3_thingtalk_simplified_paraphrases.json" \
-    --engine text-davinci-003 \
-    --num_gen 3
+    --prompt_template_file "src/data/prompts/paraphrase.prompt" \
+    --input_file "src/data/input/tt_gpt3_dev.json" \
+    --output_file "src/data/input/davinci2/gpt3_tt_paraphrases_dev.json" \
+    --engine text-davinci-002 \
+    --num_gen 1 \
+    --temperature 0.8 \
+    --frequency_penalty 0.5 \
+    --presence_penalty 0.5 \
+    --use_thingtalk
 
 # Generate answers to GPT-3 paraphrases
 # Input: JSON of questions and corresponding paraphrases
@@ -89,6 +85,13 @@ python src/generator.py \
 # }
 # node index.js
 
-# Output question query accuracy
+# Output question query and answer accuracy
 python src/utils/eval.py \
-    --input_file "src/data/output/paraphrase_answer.json"
+    --input_file "src/data/output/davinci2/gpt3_paraphrases_dev.json" \
+    --baseline_file "src/data/output/baseline/answer_dev.json" \
+    --twoshot
+
+python src/utils/eval.py \
+    --input_file "src/data/output/davinci2/gpt3_tt_paraphrases_dev.json" \
+    --baseline_file "src/data/output/baseline/answer_dev.json" \
+    --twoshot

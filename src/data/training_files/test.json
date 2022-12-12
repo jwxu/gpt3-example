@@ -18,22 +18,22 @@
         {
             "question": "which river does the brooklyn bridge cross ?",
             "gold": "[ crosses ] of @wd . entity ( ) filter id == \" Q125006 \" ^^wd:entity ;",
-            "gold_answer": "East River (Q212862)"
+            "gold_answer": "East River (Q212862)\n"
         },
         {
             "question": "how many countries are there in europe ?",
             "gold": "count ( @wd . country ( ) filter contains ( continent , \" Q46 \" ^^wd:entity ) ) ;",
-            "gold_answer": ""
+            "gold_answer": "94"
         },
         {
             "question": "in which city did john f . kennedy die ?",
             "gold": "[ < place_of_death / located_in_the_administrative_territorial_entity > : Entity ( wd:city ) ] of @wd . entity ( ) filter id == \" Q9696 \" ^^wd:entity ;",
-            "gold_answer": "Dallas (Q16557)"
+            "gold_answer": "Dallas (Q16557)\n"
         },
         {
             "question": "does the isar flow into a lake ?",
             "gold": "[ contains ( mouth_of_the_watercourse , any ( [ id ] of @wd . lake ( ) ) ) ] of @wd . entity ( ) filter id == \" Q106588 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "false"
         },
         {
             "question": "which countries have more than ten caves ?",
@@ -43,12 +43,12 @@
         {
             "question": "are tree frogs a type of amphibian ?",
             "gold": "[ contains ( < parent_taxon * > , \" Q10908 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q53696 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "true"
         },
         {
             "question": "who created goofy ?",
             "gold": "[ creator ] of @wd . entity ( ) filter id == \" Q111135 \" ^^wd:entity ;",
-            "gold_answer": "Art Babbitt (Q2420722)"
+            "gold_answer": "Art Babbitt (Q2420722)\n"
         },
         {
             "question": "give me the capitals of all countries in africa .",
@@ -73,12 +73,12 @@
         {
             "question": "how many people live in the capital of australia ?",
             "gold": "[ population ] of @wd . entity ( ) filter in_array ( id , any ( [ capital ] of @wd . entity ( ) filter id == \" Q408 \" ^^wd:entity ) ) ;",
-            "gold_answer": ""
+            "gold_answer": "381488"
         },
         {
             "question": "in which country is the limerick lake ?",
             "gold": "[ country ] of @wd . entity ( ) filter id == \" Q6386177 \" ^^wd:entity ;",
-            "gold_answer": "Canada (Q16)"
+            "gold_answer": "Canada (Q16)\n"
         },
         {
             "question": "which television shows were created by john cleese ?",
@@ -88,7 +88,7 @@
         {
             "question": "which mountain is the highest after the annapurna ?",
             "gold": "sort ( elevation_above_sea_level desc of @wd . mountain ( ) filter elevation_above_sea_level <= any ( [ elevation_above_sea_level ] of @wd . entity ( ) filter id == \" Q16466024 \" ^^wd:entity ) ) [ 1 ] ;",
-            "gold_answer": "Vinegar Hill (Q39074795)"
+            "gold_answer": "Vinegar Hill (Q39074795)\n"
         },
         {
             "question": "in which films directed by garry marshall was julia roberts starring ?",
@@ -98,7 +98,7 @@
         {
             "question": "was united states president jackson involved in a war ?",
             "gold": "[ count ( conflict ) >= 1 ] of @wd . entity ( ) filter id == \" Q11817 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "true"
         },
         {
             "question": "give me all communist countries .",
@@ -113,7 +113,7 @@
         {
             "question": "what is the currency of the czech republic ?",
             "gold": "[ currency ] of @wd . entity ( ) filter id == \" Q213 \" ^^wd:entity ;",
-            "gold_answer": "Czech koruna (Q131016)"
+            "gold_answer": "Czech koruna (Q131016)\n"
         },
         {
             "question": "which countries adopted the euro ?",
@@ -123,7 +123,7 @@
         {
             "question": "what is the area code of berlin ?",
             "gold": "[ local_dialing_code ] of @wd . entity ( ) filter id == \" Q64 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "030"
         },
         {
             "question": "which countries have more than two official languages ?",
@@ -138,12 +138,12 @@
         {
             "question": "through which countries does the yenisei river flow ?",
             "gold": "[ country ] of @wd . entity ( ) filter id == \" Q78707 \" ^^wd:entity ;",
-            "gold_answer": "Russia (Q159)"
+            "gold_answer": "Russia (Q159)\n"
         },
         {
             "question": "when did latvia join the eu ?",
             "gold": "[ start_time of ( member_of filter value == \" Q458 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q211 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "2004-05-01T00:00:00Z"
         },
         {
             "question": "which politicians were married to a german ?",
@@ -153,12 +153,12 @@
         {
             "question": "when was the battle of gettysburg ?",
             "gold": "[ start_time ] of @wd . entity ( ) filter id == \" Q33132 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "1863-07-01T00:00:00Z"
         },
         {
             "question": "what is the highest mountain in australia ?",
             "gold": "sort ( elevation_above_sea_level desc of @wd . mountain ( ) filter contains ( continent , \" Q3960 \" ^^wd:entity ) ) [ 1 ] ;",
-            "gold_answer": "Mount Kosciuszko (Q178167)"
+            "gold_answer": "Mount Kosciuszko (Q178167)\n"
         },
         {
             "question": "give me all soccer clubs in spain .",
@@ -168,12 +168,12 @@
         {
             "question": "what is the official language of suriname ?",
             "gold": "[ official_language ] of @wd . entity ( ) filter id == \" Q730 \" ^^wd:entity ;",
-            "gold_answer": "Dutch (Q7411)"
+            "gold_answer": "Dutch (Q7411)\n"
         },
         {
             "question": "who is the mayor of tel aviv ?",
             "gold": "[ head_of_government ] of @wd . entity ( ) filter id == \" Q33935 \" ^^wd:entity ;",
-            "gold_answer": "Ron Huldai (Q114760)"
+            "gold_answer": "Ron Huldai (Q114760)\n"
         },
         {
             "question": "which telecommunications organizations are located in belgium ?",
@@ -183,17 +183,17 @@
         {
             "question": "is frank herbert still alive ?",
             "gold": "[ ! ( date_of_death == null ) && ! ( date_of_death == null ) ] of @wd . entity ( ) filter id == \" Q7934 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "true"
         },
         {
             "question": "what is the highest place of the urals ?",
             "gold": "[ highest_point ] of @wd . entity ( ) filter id == \" Q35600 \" ^^wd:entity ;",
-            "gold_answer": "Mount Narodnaya (Q1142817)"
+            "gold_answer": "Mount Narodnaya (Q1142817)\n"
         },
         {
             "question": "who wrote the lyrics for the polish national anthem ?",
             "gold": "[ < anthem / lyrics_by > ] of @wd . entity ( ) filter id == \" Q36 \" ^^wd:entity ;",
-            "gold_answer": "Józef Wybicki (Q370069)"
+            "gold_answer": "Józef Wybicki (Q370069)\n"
         },
         {
             "question": "give me all federal chancellors of germany .",
@@ -203,7 +203,7 @@
         {
             "question": "what is the official website of tom cruise ?",
             "gold": "[ official_website ] of @wd . entity ( ) filter id == \" Q37079 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "http://www.tomcruise.com"
         },
         {
             "question": "list all episodes of the first season of the hbo television series the sopranos .",
@@ -213,7 +213,7 @@
         {
             "question": "is there a video game called battle chess ?",
             "gold": "[ count >= 1 ] of count ( @wd . video_game ( ) filter id =~ \" battle chess \" ) ;",
-            "gold_answer": ""
+            "gold_answer": "true"
         },
         {
             "question": "give me the websites of companies with more than 500000 employees .",
@@ -238,17 +238,17 @@
         {
             "question": "when did the ming dynasty dissolve ?",
             "gold": "[ dissolved_abolished_or_demolished_date ] of @wd . entity ( ) filter id == \" Q9903 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "1644-01-01T00:00:00Z"
         },
         {
             "question": "is lake baikal bigger than the great bear lake ?",
             "gold": "[ area >= any ( [ area ] of @wd . entity ( ) filter id == \" Q5525 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q5513 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "true"
         },
         {
             "question": "was the cuban missile crisis earlier than the bay of pigs invasion ?",
             "gold": "[ end_time <= any ( [ start_time ] of @wd . entity ( ) filter id == \" Q191721 \" ^^wd:entity ) ] of @wd . entity ( ) filter id == \" Q128160 \" ^^wd:entity ;",
-            "gold_answer": ""
+            "gold_answer": "false"
         }
     ]
 }
